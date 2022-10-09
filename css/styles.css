@@ -1,0 +1,449 @@
+/* Table of contents
+--------------------------------------------------
+    1. Variables
+      1.1 All colors used in project
+      1.2 Light theme colors
+      1.3 Typography
+      1.4 Spacing
+      1.5 Other
+      1.6 Dark theme colors
+    2. Reset
+    3. General
+    4. Typography
+    5. Utility
+    6. Layout
+    7. Components
+      7.1. Button
+      7.2. Form Elements
+
+*/
+
+/** 1. Variables
+-------------------------*/
+/* #region */
+:root {
+  /* 1.1 All colors used in project
+-------------------------*/
+  --clr-primary-300: #c5b5ec;
+  --clr-primary-350: #8564d8;
+  --clr-primary-400: #7246e2;
+  --clr-primary-450: #4924a7;
+  --clr-primary-500: #3e1765;
+
+  --clr-neutral-100: #ffffff;
+  --clr-neutral-150: #f5f8fa;
+  --clr-neutral-200: #d8dee1;
+  --clr-neutral-300: #91939c;
+  --clr-neutral-350: #8c8f97;
+  --clr-neutral-400: #6f727b;
+  --clr-neutral-450: #61646b;
+  --clr-neutral-500: #25262d;
+  --clr-neutral-550: #17171a;
+  --clr-neutral-600: #0d0d0d;
+
+  /* 1.2 Light theme colors
+-------------------------*/
+  --clr-theme-primary-350: var(--clr-primary-350);
+  --clr-theme-primary-400: var(--clr-primary-400);
+  --clr-theme-primary-450: var(--clr-primary-450);
+  --clr-theme-secondary-400: var(--clr-primary-500);
+
+  --clr-font: var(--clr-neutral-550);
+  --clr-bg: var(--clr-neutral-100);
+  --clr-font-contrast: var(--clr-neutral-400);
+  --clr-card: var(--clr-neutral-100);
+  --clr-border-contrast: var(--clr-neutral-300);
+  --clr-table: var(--clr-neutral-200);
+
+  /*! See dark secondary colors under .dark:root */
+
+  /* 1.3 Typography
+-------------------------*/
+  --ff-base: "Roboto", sans-serif;
+  --ff-accent: "Roboto", sans-serif;
+
+  --fs-400: 1rem; /* 16px */
+  --fs-450: 1.25rem; /* 20px */
+  --fs-500: 1.56rem; /* 25px */
+  --fs-600: 2.56rem; /* 41px */
+  --fs-700: 3.19rem; /* 51px */
+  --fs-800: 4.06rem; /* 64px */
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /* 1.4 Spacing
+-------------------------*/
+  --space-350: 0.5rem; /* 8px */
+  --space-375: 0.75rem; /* 12px */
+  --space-400: 1rem; /* 16px */
+  --space-450: 1.5rem; /* 24px */
+  --space-500: 2rem; /* 32px */
+  --space-600: 3rem; /* 48px */
+  --space-700: 4rem; /* 64px */
+  --space-900: 6rem; /* 96px */
+  --space-1000: 8rem; /* 128px */
+
+  /* 1.5 Other
+-------------------------*/
+  --box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  --border-radius: 5px;
+}
+
+.dark:root {
+  /* 1.6 Dark theme colors
+---------------------- ---*/
+  --clr-theme-primary-350: var(--clr-primary-350);
+  --clr-theme-primary-400: var(--clr-primary-400);
+  --clr-theme-primary-450: var(--clr-primary-450);
+  --clr-theme-secondary-400: var(--clr-primary-300);
+
+  --clr-font: var(--clr-neutral-100);
+  --clr-bg: var(--clr-neutral-550);
+  --clr-font-contrast: var(--clr-neutral-350);
+  --clr-card: var(--clr-neutral-500);
+  --clr-border-contrast: var(--clr-neutral-450);
+  --clr-table: var(--clr-neutral-500);
+  --clr-table-dark: var(--clr-neutral-550);
+}
+
+/* #endregion */
+
+/** 2. Reset
+-------------------------*/
+/* #region */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+p,
+body {
+  margin: 0;
+  font-weight: 400;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ul:not(.default),
+ol:not(.default) {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* #endregion */
+
+/** 3. General
+-------------------------*/
+/* #region */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--ff-base);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-regular);
+  line-height: 1.6; /*! uncertain number*/
+  color: var(--clr-font);
+  background-color: var(--clr-bg);
+  min-height: 100vh;
+  padding: 0;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.min-full-height {
+  min-height: 100vh;
+}
+
+/* Skip to main */
+.skip-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: var(--space-350);
+  border-radius: 0 0 var(--border-radius) 0;
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+  transform: translateX(-130%);
+  transition: transform 300ms ease-in;
+}
+
+.skip-nav:focus {
+  transform: translateX(0);
+  outline: none;
+}
+
+/* Removes smooth scrolling, animation and transitions for people that doesnt want to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* #endregion */
+
+/** 4. Typography
+-------------------------*/
+/* #region */
+h1,
+.h1 {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-bold);
+}
+
+h2,
+.h2 {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-bold);
+}
+
+h3,
+.h3 {
+  font-size: var(--fs-450);
+  font-weight: var(--fw-medium);
+}
+
+.text-500 {
+  font-size: var(--fs-500);
+}
+.text-800 {
+  font-size: var(--fs-800);
+}
+.text-700 {
+  font-size: var(--fs-700);
+}
+
+.text-bold {
+  font-weight: var(--fw-bold);
+}
+/* #endregion */
+
+/** 5. Utility
+-------------------------*/
+/* #region */
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  word-wrap: normal;
+  overflow: hidden;
+}
+
+/* [class*="bg-"] selects all elements whose class contains bg- */
+[class*="bg-"] {
+  color: var(--fg, red);
+  background-color: var(--bg, yellow);
+}
+
+.bg-low-contrast {
+  --bg: var(--crl-table-bg);
+}
+
+.bg-card {
+  --bg: var(--clr-card);
+
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+}
+
+.bg-dark {
+  --bg: var(--clr-neutral-600);
+  --fg: var(--clr-neutral-100);
+}
+
+.text-low-contrast {
+  color: var(--clr-font-contrast);
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap var(--space-400));
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap var(--space-400));
+}
+
+.d-block {
+  display: block;
+}
+
+.o-hidden {
+  overflow: hidden;
+}
+
+/* Child elements that has a previous sibling gains margin-top,
+This keeps things consistent regardless of the formatting context */
+.flow-content > * + * {
+  margin-top: var(--flow-space, var(--space-400));
+}
+
+.container {
+  --max-width: 1200px;
+  --screen-edge: var(--space-375);
+
+  width: min(var(--max-width), 100% - (var(--screen-edge) * 2));
+  margin-inline: auto;
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, var(--space-400));
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, var(--space-400));
+}
+
+.flex--col {
+  flex-direction: column;
+}
+
+.grid--even-columns {
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+}
+
+@media (min-width: 50em) {
+  .grid--even-col2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* #endregion */
+
+/** 6. Layout
+-------------------------*/
+/* #region */
+.games-container {
+  --gap: var(--space-450);
+}
+@media (min-width: 50em) {
+  .games-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 70em) {
+  .games-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+/* #endregion */
+
+/** 7. Components
+-------------------------*/
+/* #region */
+
+/* 7.1. Button
+-------------------------*/
+.btn {
+  display: inline-block;
+  padding: var(--space-350) var(--space-600);
+  font-size: var(--fs-450);
+  font-weight: var(--fw-medium);
+  color: var(--btn-fg, var(--clr-neutral-100));
+  background-color: var(--btn-bg, var(--clr-theme-primary-400));
+  border: none;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  color: var(--fg-hover, var(--clr-neutral-100));
+  background-color: var(--bg-hover, var(--clr-theme-primary-350));
+}
+
+.btn--arrow {
+  --btn-fg: var(--clr-neutral-100);
+  --btn-bg: var(--clr-neutral-600);
+
+  --bg-hover: var(--clr-neutral-500);
+}
+
+.btn--accent {
+  --btn-fg: var(--clr-theme-secondary-400);
+  --btn-bg: transparent;
+
+  --fg-hover: var(--clr-bg);
+  --bg-hover: var(--clr-theme-secondary-400);
+
+  border: 2px solid var(--btn-fg);
+}
+
+/* 7.2. Form Elements
+-------------------------*/
+input,
+textarea {
+  background-color: var(--clr-card);
+  color: var(--clr-font);
+  border: 1px solid var(--clr-border-contrast);
+  padding: var(--space-350);
+}
+
+@media (min-width: 50em) {
+  input,
+  textarea {
+    padding: var(--space-375);
+  }
+}
+/* #endregion */

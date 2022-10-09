@@ -1,0 +1,84 @@
+/* Table of contents
+--------------------------------------------------
+    1. Primary header and navigation
+    2. Secondary navigation / breadcrumbs
+    3. Primary footer
+*/
+
+/** 1. Primary header and navigation
+-------------------------*/
+/* #region */
+.primary-header .top-bar {
+  --gap: var(--space-700);
+  grid-template-columns: auto 1fr auto;
+}
+
+.primary-header .search {
+  --gap: 0;
+}
+
+.primary-header .search input {
+  width: 100%;
+}
+
+@media (max-width: 50em) {
+  .primary-header .top-bar {
+    --gap: var(--space-400);
+  }
+  .primary-header .search {
+    grid-column: 1 / 4;
+    grid-row: 2;
+  }
+
+  .primary-header .search input {
+    width: 100%;
+  }
+
+  .primary-header nav {
+    background-color: var(--clr-card);
+    position: fixed;
+    inset: 0 10% 0 0;
+    padding-block: var(--space-375);
+    box-shadow: 0 0 0 10000vmax rgba(0, 0, 0, 0.24);
+  }
+  .primary-header nav[data-visible="false"] {
+    display: none;
+  }
+
+  .primary-navigation {
+    flex-direction: column;
+  }
+}
+@media (min-width: 50em) {
+  .mobile-nav-toggle {
+    display: none;
+  }
+}
+
+/* #endregion */
+
+/** 2. Secondary navigation / breadcrumbs
+-------------------------*/
+/* #region */
+.secondary-navigation {
+  margin-bottom: var(--space-500);
+}
+.secondary-navigation span {
+  font-weight: var(--fw-medium);
+}
+
+@media (max-width: 50em) {
+  .secondary-navigation ol > *:not(:nth-last-child(2)),
+  .secondary-navigation span {
+    display: none;
+  }
+}
+/* #endregion */
+
+/** 3. Primary footer
+-------------------------*/
+/* #region */
+footer {
+  margin-top: var(--space-1000);
+}
+/* #endregion */
