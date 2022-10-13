@@ -321,6 +321,14 @@ h3,
   color: var(--clr-font-contrast);
 }
 
+.rounded-corners {
+  border-radius: var(--border-radius);
+}
+
+.shadow {
+  box-shadow: var(--box-shadow);
+}
+
 .d-block {
   display: block;
 }
@@ -437,13 +445,6 @@ textarea {
   padding: var(--space-350);
   border-radius: var(--border-radius);
   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.267);
-}
-
-/* 7.3. Card
--------------------------*/
-.card {
-  box-shadow: var(--box-shadow);
-  border-radius: var(--border-radius);
 }
 
 /* #endregion */
