@@ -26,7 +26,7 @@
     <!-- Css -->
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/nav-footer.css" />
-    <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/history.css" />
   </head>
   <body>
     <div class="min-full-height">
@@ -98,36 +98,50 @@
           </div>
         </nav>
 
-        <div class="contact | container bg-card card grid">
-          <div class="">
-            <h1>F.A.Q.</h1>
-            <form action="" class="flex flex--col">
-              <label for="name">Full name *</label>
-              <input type="text" id="name" required />
-              <label for="email">Email</label>
-              <input type="email" id="email" required />
-              <label for="message" required>Message</label>
-              <textarea id="message"></textarea>
-              <button class="btn">Send Message</button>
-            </form>
-          </div>
-          <div class="contact-info | flex flex--col bg-dark">
-            <div class="flow-content">
-              <h2>Address</h2>
-              <div>
-                Møllerheia 81, Grimstad,<br />
-                4878, Norway
-              </div>
-            </div>
-            <div class="flow-content">
-              <h2>Phone</h2>
-              <div>+47 942 48 748</div>
-            </div>
-            <div class="flow-content">
-              <h2>Email</h2>
-              <div>ghsupport@gamehub.com</div>
-            </div>
-          </div>
+        <div class="history | container">
+          <h1>Purchase history</h1>
+          <table>
+            <thead>
+              <th class="h3">Date</th>
+              <th class="h3">Order nr</th>
+              <th class="h3">Status</th>
+              <th class="h3">Price</th>
+              <th class="h3">Product(s)</th>
+            </thead>
+            <tbody class="odd-table-rows">
+              <tr>
+                <td class="date">07/11/21</td>
+                <td class="order-number"><a href="./purchase-details.html" class="link">71270214</a></td>
+                <td class="status">Complete</td>
+                <td class="price">$123.97</td>
+                <td class="products">
+                  <span>Cyberpunk 2077</span><span>The Witcher 3: Wild Hunt</span
+                  ><span>Ori and the Will of the Wisps</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="date">28/10/21</td>
+                <td class="order-number"><a href="./purchase-details.html" class="link">94536530</a></td>
+                <td class="status">Complete</td>
+                <td class="price">$6.79</td>
+                <td class="products"><span>GRIS</span></td>
+              </tr>
+              <tr>
+                <td class="date">02/08/21</td>
+                <td class="order-number"><a href="./purchase-details.html" class="link">53408512</a></td>
+                <td class="status">Complete</td>
+                <td class="price">$9.99</td>
+                <td class="products"><span>Q.U.B.E. 2</span></td>
+              </tr>
+              <tr>
+                <td class="date">21/03/21</td>
+                <td class="order-number"><a href="./purchase-details.html" class="link">23260841</a></td>
+                <td class="status">Complete</td>
+                <td class="price">$19.99</td>
+                <td class="products"><span>Fallout 76</span></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </main>
     </div>

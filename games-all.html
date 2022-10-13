@@ -26,7 +26,6 @@
     <!-- Css -->
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/nav-footer.css" />
-    <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
     <div class="min-full-height">
@@ -75,8 +74,8 @@
               <span class="material-symbols-outlined"> close </span>
             </button>
             <ul id="primary-navigation" class="primary-navigation | flex" aria-label="primary navigation">
-              <li><a href="./index.html" class="active">Home</a></li>
-              <li><a href="./games-all.html">Games</a></li>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./games-all.html" class="active">Games</a></li>
               <li><a href="./games-preorder.html">Pre-orders</a></li>
               <li><a href="./games-deals.html">Special deals</a></li>
               <li><a href="./faq.html">F.A.Q.</a></li>
@@ -86,22 +85,26 @@
         </nav>
       </header>
 
-      <main class="homepage | flex flex--col" id="main-content">
-        <section class="pre-order banner banner--image-bg | container bg-dark">
-          <div class="flow-content">
-            <h2 class="text-bold">God of War</h2>
-            <p class="text-500">Coming 14th January, 2022</p>
-            <a href="./product.html" class="btn">Pre-order now</a>
+      <main class="games" id="main-content">
+        <nav class="secondary-navigation" aria-label="breadcrumbs">
+          <div class="container flex">
+            <span>You are here:</span>
+            <ol class="flex">
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 2</a></li>
+              <li><a href="#" aria-current="Item 3">Item 3</a></li>
+            </ol>
           </div>
-        </section>
+        </nav>
 
-        <section class="container flow-content">
-          <h2>Latest games</h2>
+        <div class="container">
+          <h1>All games</h1>
+
           <div class="games-container | grid">
             <a href="./product.html" class="card | flow-content bg-card">
               <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
               <div class="info | flow-content">
-                <h3>Mass Effect Legendary Edition</h3>
+                <h2 class="h3">Mass Effect Legendary Edition</h2>
                 <div class="pricing | grid grid--even-columns">
                   <span class="discount">10%</span>
                   <div class="flex flex--col">
@@ -114,7 +117,7 @@
             <a href="./product.html" class="card | flow-content bg-card">
               <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
               <div class="info | flow-content">
-                <h3>Mass Effect Legendary Edition</h3>
+                <h2 class="h3">Mass Effect Legendary Edition</h2>
                 <div class="pricing | grid grid--even-columns">
                   <span class="discount">10%</span>
                   <div class="flex flex--col">
@@ -127,7 +130,7 @@
             <a href="./product.html" class="card | flow-content bg-card">
               <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
               <div class="info | flow-content">
-                <h3>Mass Effect Legendary Edition</h3>
+                <h2 class="h3">Mass Effect Legendary Edition</h2>
                 <div class="pricing | grid grid--even-columns">
                   <span class="discount">10%</span>
                   <div class="flex flex--col">
@@ -140,7 +143,7 @@
             <a href="./product.html" class="card | flow-content bg-card">
               <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
               <div class="info | flow-content">
-                <h3>Mass Effect Legendary Edition</h3>
+                <h2 class="h3">Mass Effect Legendary Edition</h2>
                 <div class="pricing | grid grid--even-columns">
                   <span class="discount">10%</span>
                   <div class="flex flex--col">
@@ -150,33 +153,116 @@
                 </div>
               </div>
             </a>
-          </div>
-        </section>
 
-        <section class="sale banner banner--image-bg | bg-dark container">
-          <div class="flex">
-            <div>
-              <img src="./assets/banner/rise-of-the-tomb-raider.jpg" alt="" />
-            </div>
-            <div class="content grid">
-              <h2>This months deal</h2>
-              <span class="subtitle">Rise of the tomb raider</span>
-              <div>
-                <span><s class="original-price">$16.99</s></span>
-                <span class="new-price">$6.79</span>
+            <a href="./product.html" class="card | flow-content bg-card">
+              <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
+              <div class="info | flow-content">
+                <h2 class="h3">Mass Effect Legendary Edition</h2>
+                <div class="pricing | grid grid--even-columns">
+                  <span class="discount">10%</span>
+                  <div class="flex flex--col">
+                    <span><s class="original-price">$16.99</s></span>
+                    <span class="current-price">$8.49</span>
+                  </div>
+                </div>
               </div>
-              <a href="#" class="btn btn--arrow">View</a>
-            </div>
-          </div>
-        </section>
+            </a>
+            <a href="./product.html" class="card | flow-content bg-card">
+              <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
+              <div class="info | flow-content">
+                <h2 class="h3">Mass Effect Legendary Edition</h2>
+                <div class="pricing | grid grid--even-columns">
+                  <span class="discount">10%</span>
+                  <div class="flex flex--col">
+                    <span><s class="original-price">$16.99</s></span>
+                    <span class="current-price">$8.49</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./product.html" class="card | flow-content bg-card">
+              <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
+              <div class="info | flow-content">
+                <h2 class="h3">Mass Effect Legendary Edition</h2>
+                <div class="pricing | grid grid--even-columns">
+                  <span class="discount">10%</span>
+                  <div class="flex flex--col">
+                    <span><s class="original-price">$16.99</s></span>
+                    <span class="current-price">$8.49</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./product.html" class="card | flow-content bg-card">
+              <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
+              <div class="info | flow-content">
+                <h2 class="h3">Mass Effect Legendary Edition</h2>
+                <div class="pricing | grid grid--even-columns">
+                  <span class="discount">10%</span>
+                  <div class="flex flex--col">
+                    <span><s class="original-price">$16.99</s></span>
+                    <span class="current-price">$8.49</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./product.html" class="card | flow-content bg-card">
+              <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
+              <div class="info | flow-content">
+                <h2 class="h3">Mass Effect Legendary Edition</h2>
+                <div class="pricing | grid grid--even-columns">
+                  <span class="discount">10%</span>
+                  <div class="flex flex--col">
+                    <span><s class="original-price">$16.99</s></span>
+                    <span class="current-price">$8.49</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./product.html" class="card | flow-content bg-card">
+              <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
+              <div class="info | flow-content">
+                <h2 class="h3">Mass Effect Legendary Edition</h2>
+                <div class="pricing | grid grid--even-columns">
+                  <span class="discount">10%</span>
+                  <div class="flex flex--col">
+                    <span><s class="original-price">$16.99</s></span>
+                    <span class="current-price">$8.49</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./product.html" class="card | flow-content bg-card">
+              <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
+              <div class="info | flow-content">
+                <h2 class="h3">Mass Effect Legendary Edition</h2>
+                <div class="pricing | grid grid--even-columns">
+                  <span class="discount">10%</span>
+                  <div class="flex flex--col">
+                    <span><s class="original-price">$16.99</s></span>
+                    <span class="current-price">$8.49</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./product.html" class="card | flow-content bg-card">
+              <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
+              <div class="info | flow-content">
+                <h2 class="h3">Mass Effect Legendary Edition</h2>
+                <div class="pricing | grid grid--even-columns">
+                  <span class="discount">10%</span>
+                  <div class="flex flex--col">
+                    <span><s class="original-price">$16.99</s></span>
+                    <span class="current-price">$8.49</span>
+                  </div>
+                </div>
+              </div>
+            </a>
 
-        <section class="container flow-content">
-          <h2>Special deals</h2>
-          <div class="games-container | grid">
             <a href="./product.html" class="card | flow-content bg-card">
               <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
               <div class="info | flow-content">
-                <h3>Mass Effect Legendary Edition</h3>
+                <h2 class="h3">Mass Effect Legendary Edition</h2>
                 <div class="pricing | grid grid--even-columns">
                   <span class="discount">10%</span>
                   <div class="flex flex--col">
@@ -189,7 +275,7 @@
             <a href="./product.html" class="card | flow-content bg-card">
               <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
               <div class="info | flow-content">
-                <h3>Mass Effect Legendary Edition</h3>
+                <h2 class="h3">Mass Effect Legendary Edition</h2>
                 <div class="pricing | grid grid--even-columns">
                   <span class="discount">10%</span>
                   <div class="flex flex--col">
@@ -202,7 +288,7 @@
             <a href="./product.html" class="card | flow-content bg-card">
               <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
               <div class="info | flow-content">
-                <h3>Mass Effect Legendary Edition</h3>
+                <h2 class="h3">Mass Effect Legendary Edition</h2>
                 <div class="pricing | grid grid--even-columns">
                   <span class="discount">10%</span>
                   <div class="flex flex--col">
@@ -215,7 +301,7 @@
             <a href="./product.html" class="card | flow-content bg-card">
               <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
               <div class="info | flow-content">
-                <h3>Mass Effect Legendary Edition</h3>
+                <h2 class="h3">Mass Effect Legendary Edition</h2>
                 <div class="pricing | grid grid--even-columns">
                   <span class="discount">10%</span>
                   <div class="flex flex--col">
@@ -225,126 +311,8 @@
                 </div>
               </div>
             </a>
-          </div>
-        </section>
-
-        <div class="resell banner | bg-dark container">
-          <div class="h1 flex">
-            <p>Get some money back after finishing a game through resell, or buy pre-owned games cheaper</p>
-            <img src="./assets/banner/resell.png" alt="" />
           </div>
         </div>
-
-        <section class="container flow-content">
-          <h2>Best sellers</h2>
-          <div class="games-container | grid">
-            <a href="./product.html" class="card | flow-content bg-card">
-              <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
-              <div class="info | flow-content">
-                <h3>Mass Effect Legendary Edition</h3>
-                <div class="pricing | grid grid--even-columns">
-                  <span class="discount">10%</span>
-                  <div class="flex flex--col">
-                    <span><s class="original-price">$16.99</s></span>
-                    <span class="current-price">$8.49</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="./product.html" class="card | flow-content bg-card">
-              <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
-              <div class="info | flow-content">
-                <h3>Mass Effect Legendary Edition</h3>
-                <div class="pricing | grid grid--even-columns">
-                  <span class="discount">10%</span>
-                  <div class="flex flex--col">
-                    <span><s class="original-price">$16.99</s></span>
-                    <span class="current-price">$8.49</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="./product.html" class="card | flow-content bg-card">
-              <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
-              <div class="info | flow-content">
-                <h3>Mass Effect Legendary Edition</h3>
-                <div class="pricing | grid grid--even-columns">
-                  <span class="discount">10%</span>
-                  <div class="flex flex--col">
-                    <span><s class="original-price">$16.99</s></span>
-                    <span class="current-price">$8.49</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="./product.html" class="card | flow-content bg-card">
-              <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
-              <div class="info | flow-content">
-                <h3>Mass Effect Legendary Edition</h3>
-                <div class="pricing | grid grid--even-columns">
-                  <span class="discount">10%</span>
-                  <div class="flex flex--col">
-                    <span><s class="original-price">$16.99</s></span>
-                    <span class="current-price">$8.49</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <a href="./product.html" class="card | flow-content bg-card">
-              <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
-              <div class="info | flow-content">
-                <h3>Mass Effect Legendary Edition</h3>
-                <div class="pricing | grid grid--even-columns">
-                  <span class="discount">10%</span>
-                  <div class="flex flex--col">
-                    <span><s class="original-price">$16.99</s></span>
-                    <span class="current-price">$8.49</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="./product.html" class="card | flow-content bg-card">
-              <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
-              <div class="info | flow-content">
-                <h3>Mass Effect Legendary Edition</h3>
-                <div class="pricing | grid grid--even-columns">
-                  <span class="discount">10%</span>
-                  <div class="flex flex--col">
-                    <span><s class="original-price">$16.99</s></span>
-                    <span class="current-price">$8.49</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="./product.html" class="card | flow-content bg-card">
-              <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
-              <div class="info | flow-content">
-                <h3>Mass Effect Legendary Edition</h3>
-                <div class="pricing | grid grid--even-columns">
-                  <span class="discount">10%</span>
-                  <div class="flex flex--col">
-                    <span><s class="original-price">$16.99</s></span>
-                    <span class="current-price">$8.49</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="./product.html" class="card | flow-content bg-card">
-              <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
-              <div class="info | flow-content">
-                <h3>Mass Effect Legendary Edition</h3>
-                <div class="pricing | grid grid--even-columns">
-                  <span class="discount">10%</span>
-                  <div class="flex flex--col">
-                    <span><s class="original-price">$16.99</s></span>
-                    <span class="current-price">$8.49</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </section>
       </main>
     </div>
 

@@ -1,0 +1,75 @@
+/* Table of contents
+--------------------------------------------------
+    1. General
+    2. Product view
+    3. System requirements
+*/
+
+/** 1. General
+-------------------------*/
+/* #region */
+footer {
+  margin-top: 0;
+}
+
+/* #endregion */
+
+/** 2. Product view
+-------------------------*/
+/* #region */
+.image-viewer {
+  grid-column: 1;
+  grid-row: 1 / 5;
+}
+
+@media (min-width: 30em) {
+  .product-cta-group {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* #endregion */
+
+/** 3. System requirements
+-------------------------*/
+/* #region */
+.system-req {
+  padding-block: var(--space-500);
+}
+
+.system-req > div {
+  --gap: var(--space-450);
+  column-gap: var(--space-600);
+}
+
+.system-req .req-container {
+  --flow-space: var(--space-450);
+}
+
+.system-req li {
+  --gap: var(--space-350);
+}
+
+.system-req .spec-title {
+  min-width: 10ch;
+  font-weight: var(--fw-bold);
+}
+
+@media (min-width: 50em) {
+  .system-req {
+    padding-block: var(--space-600);
+  }
+
+  .system-req li {
+    --gap: var(--space-600);
+  }
+  .system-req h2 {
+    grid-column: span 2;
+  }
+
+  .system-req li {
+    flex-direction: row;
+  }
+}
+
+/* #endregion */

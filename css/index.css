@@ -1,0 +1,71 @@
+/** 1. General
+-------------------------*/
+/* #region */
+
+.homepage {
+  gap: var(--space-600);
+}
+
+/* #endregion */
+
+/** 2. Banners
+-------------------------*/
+/* #region */
+.banner--image-bg {
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.banner--image-bg > div {
+  position: relative;
+  z-index: 100;
+}
+
+.banner--image-bg::before {
+  content: "";
+  display: block;
+  background: linear-gradient(to top, rgb(0 0 0 / 0.6) 50%, rgb(0 0 0 / 0) 100%);
+  position: absolute;
+  inset: 0;
+}
+.sale {
+  background-image: url(../assets/banner/monthly-deal.jpg);
+}
+
+.pre-order {
+  background-image: url(../assets/banner/pre-order.jpg);
+}
+
+.banner > div {
+  padding: var(--space-500) var(--screen-edge);
+}
+.pre-order > div {
+  padding-top: calc(var(--space-1000) * 1.5);
+}
+
+@media (max-width: 50em) {
+  .banner {
+    width: min(var(--max-width), 100%);
+  }
+}
+
+@media (min-width: 50em) {
+  .banner {
+    border-radius: var(--border-radius);
+  }
+
+  .banner > div {
+    padding: var(--space-700);
+  }
+
+  .banner--image-bg::before {
+    background: linear-gradient(to right, rgb(0 0 0 / 0.6) 50%, rgb(0 0 0 / 0) 100%);
+  }
+
+  .pre-order {
+    margin-top: vaR(--space-600);
+  }
+}
+
+/* #endregion */

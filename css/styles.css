@@ -55,7 +55,7 @@
   --clr-border-contrast: var(--clr-neutral-300);
   --clr-table: var(--clr-neutral-200);
 
-  /*! See dark secondary colors under .dark:root */
+  /*? See dark secondary colors under .dark:root */
 
   /* 1.3 Typography
 -------------------------*/
@@ -88,7 +88,7 @@
   /* 1.5 Other
 -------------------------*/
   --box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  --border-radius: 5px;
+  --border-radius: 3px;
 }
 
 .dark:root {
@@ -169,11 +169,18 @@ select {
   font: inherit;
 }
 
-ul:not(.default),
-ol:not(.default) {
+ul,
+ol {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+table,
+th,
+td {
+  margin: 0;
+  padding: 0;
 }
 /* #endregion */
 
@@ -262,11 +269,13 @@ h3,
 .text-500 {
   font-size: var(--fs-500);
 }
-.text-800 {
-  font-size: var(--fs-800);
-}
+
 .text-700 {
   font-size: var(--fs-700);
+}
+
+.text-800 {
+  font-size: var(--fs-800);
 }
 
 .text-bold {
@@ -291,19 +300,12 @@ h3,
 
 /* [class*="bg-"] selects all elements whose class contains bg- */
 [class*="bg-"] {
-  color: var(--fg, red);
-  background-color: var(--bg, yellow);
-}
-
-.bg-low-contrast {
-  --bg: var(--crl-table-bg);
+  color: var(--fg, var(--clr-font));
+  background-color: var(--bg, green);
 }
 
 .bg-card {
   --bg: var(--clr-card);
-
-  box-shadow: var(--box-shadow);
-  border-radius: var(--border-radius);
 }
 
 .bg-dark {
@@ -311,18 +313,12 @@ h3,
   --fg: var(--clr-neutral-100);
 }
 
-.text-low-contrast {
+.bg-low-contrast {
+  --bg: var(--crl-table-bg);
+}
+
+.fg-low-contrast {
   color: var(--clr-font-contrast);
-}
-
-.flex {
-  display: flex;
-  gap: var(--gap var(--space-400));
-}
-
-.grid {
-  display: grid;
-  gap: var(--gap var(--space-400));
 }
 
 .d-block {
@@ -405,6 +401,7 @@ This keeps things consistent regardless of the formatting context */
   color: var(--btn-fg, var(--clr-neutral-100));
   background-color: var(--btn-bg, var(--clr-theme-primary-400));
   border: none;
+  border-radius: var(--border-radius);
 }
 
 .btn:hover,
@@ -434,16 +431,19 @@ This keeps things consistent regardless of the formatting context */
 -------------------------*/
 input,
 textarea {
-  background-color: var(--clr-card);
+  background-color: var(--clr-bg);
   color: var(--clr-font);
   border: 1px solid var(--clr-border-contrast);
   padding: var(--space-350);
+  border-radius: var(--border-radius);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.267);
 }
 
-@media (min-width: 50em) {
-  input,
-  textarea {
-    padding: var(--space-375);
-  }
+/* 7.3. Card
+-------------------------*/
+.card {
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
 }
+
 /* #endregion */

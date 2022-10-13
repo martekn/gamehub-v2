@@ -1,0 +1,46 @@
+.account-settings > div {
+  gap: var(--space-600);
+}
+.account-settings label {
+  display: block;
+}
+
+.account-settings input {
+  width: 100%;
+}
+
+form,
+section {
+  padding: var(--space-450) var(--space-500);
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+legend {
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 50em) {
+  form,
+  section {
+    padding: var(--space-600);
+  }
+  .account-settings > div {
+    grid-template-rows: auto 1fr;
+    align-items: start;
+    gap: var(--space-700);
+  }
+
+  h1 {
+    grid-column: span 2;
+  }
+
+  .information {
+    grid-row: span 2;
+  }
+}

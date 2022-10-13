@@ -26,7 +26,6 @@
     <!-- Css -->
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/nav-footer.css" />
-    <link rel="stylesheet" href="./css/contact.css" />
   </head>
   <body>
     <div class="min-full-height">
@@ -77,16 +76,16 @@
             <ul id="primary-navigation" class="primary-navigation | flex" aria-label="primary navigation">
               <li><a href="./index.html">Home</a></li>
               <li><a href="./games-all.html">Games</a></li>
-              <li><a href="./games-preorder.html">Pre-orders</a></li>
+              <li><a href="./games-preorder.html" class="active">Pre-orders</a></li>
               <li><a href="./games-deals.html">Special deals</a></li>
               <li><a href="./faq.html">F.A.Q.</a></li>
-              <li><a href="./contact.html" class="active">Contact us</a></li>
+              <li><a href="./contact.html">Contact us</a></li>
             </ul>
           </div>
         </nav>
       </header>
 
-      <main id="main-content">
+      <main class="games" id="main-content">
         <nav class="secondary-navigation" aria-label="breadcrumbs">
           <div class="container flex">
             <span>You are here:</span>
@@ -98,35 +97,49 @@
           </div>
         </nav>
 
-        <div class="contact | container bg-card card grid">
-          <div class="">
-            <h1>F.A.Q.</h1>
-            <form action="" class="flex flex--col">
-              <label for="name">Full name *</label>
-              <input type="text" id="name" required />
-              <label for="email">Email</label>
-              <input type="email" id="email" required />
-              <label for="message" required>Message</label>
-              <textarea id="message"></textarea>
-              <button class="btn">Send Message</button>
-            </form>
-          </div>
-          <div class="contact-info | flex flex--col bg-dark">
-            <div class="flow-content">
-              <h2>Address</h2>
-              <div>
-                Møllerheia 81, Grimstad,<br />
-                4878, Norway
+        <div class="container">
+          <h1>Pre-orders</h1>
+
+          <div class="games-container | grid">
+            <a href="./product.html" class="card | flow-content bg-card">
+              <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
+              <div class="info | flow-content">
+                <h2 class="h3">Mass Effect Legendary Edition</h2>
+                <div class="pricing | grid grid--even-columns">
+                  <span class="discount">10%</span>
+                  <div class="flex flex--col">
+                    <span><s class="original-price">$16.99</s></span>
+                    <span class="current-price">$8.49</span>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="flow-content">
-              <h2>Phone</h2>
-              <div>+47 942 48 748</div>
-            </div>
-            <div class="flow-content">
-              <h2>Email</h2>
-              <div>ghsupport@gamehub.com</div>
-            </div>
+            </a>
+            <a href="./product.html" class="card | flow-content bg-card">
+              <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
+              <div class="info | flow-content">
+                <h2 class="h3">Mass Effect Legendary Edition</h2>
+                <div class="pricing | grid grid--even-columns">
+                  <span class="discount">10%</span>
+                  <div class="flex flex--col">
+                    <span><s class="original-price">$16.99</s></span>
+                    <span class="current-price">$8.49</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./product.html" class="card | flow-content bg-card">
+              <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
+              <div class="info | flow-content">
+                <h2 class="h3">Mass Effect Legendary Edition</h2>
+                <div class="pricing | grid grid--even-columns">
+                  <span class="discount">10%</span>
+                  <div class="flex flex--col">
+                    <span><s class="original-price">$16.99</s></span>
+                    <span class="current-price">$8.49</span>
+                  </div>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </main>

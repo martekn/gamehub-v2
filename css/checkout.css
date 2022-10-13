@@ -1,0 +1,39 @@
+.purchase-checkout fieldset {
+  display: none;
+}
+fieldset.current-step {
+  display: flex;
+}
+
+form {
+  padding: var(--space-450) var(--space-500);
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+legend {
+  padding: 0;
+  margin: 0;
+}
+
+label {
+  display: block;
+}
+@media (min-width: 50em) {
+  .checkout {
+    grid-template-columns: 4fr 3fr;
+    align-items: start;
+  }
+
+  .checkout h1 {
+    grid-column: span 2;
+  }
+  form,
+  section {
+    padding: var(--space-600);
+  }
+}

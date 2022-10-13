@@ -26,7 +26,7 @@
     <!-- Css -->
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/nav-footer.css" />
-    <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/cart.css" />
   </head>
   <body>
     <div class="min-full-height">
@@ -98,35 +98,61 @@
           </div>
         </nav>
 
-        <div class="contact | container bg-card card grid">
-          <div class="">
-            <h1>F.A.Q.</h1>
-            <form action="" class="flex flex--col">
-              <label for="name">Full name *</label>
-              <input type="text" id="name" required />
-              <label for="email">Email</label>
-              <input type="email" id="email" required />
-              <label for="message" required>Message</label>
-              <textarea id="message"></textarea>
-              <button class="btn">Send Message</button>
-            </form>
+        <div class="shopping-cart | grid container">
+          <h1>My cart</h1>
+          <div class="cart-items | bg-card card">
+            <div class="cart-header | grid" aria-hidden="true">
+              <span class="h3">Product(s)</span><span class="h3">Price</span><span class="h3">Remove</span>
+            </div>
+            <ul aria-label="Products in cart with price and remove from cart option">
+              <li class="cart-item | grid">
+                <img src="./assets/covers/image4.jpg" alt="" />
+                <span class="product-name">Cyberpunk 2077</span>
+
+                <span class="product-price"><span class="visually-hidden">Product price:</span>$59.99</span>
+                <button>
+                  <span class="visually-hidden">Remove product from cart</span
+                  ><span class="material-symbols-outlined" aria-hidden="true"> delete </span>
+                </button>
+              </li>
+              <li class="cart-item | grid">
+                <img src="./assets/covers/image11.jpg" alt="" />
+                <span class="product-name">The Witcher 3: Wild Hunt</span>
+
+                <span class="product-price"><span class="visually-hidden">Product price:</span>$39.99</span>
+                <button>
+                  <span class="visually-hidden">Remove product from cart</span
+                  ><span class="material-symbols-outlined" aria-hidden="true"> delete </span>
+                </button>
+              </li>
+              <li class="cart-item | grid">
+                <img src="./assets/covers/image13.jpg" alt="" />
+                <span class="product-name">Ori and the Will of the Wisps</span>
+                <span class="product-price"><span class="visually-hidden">Product price:</span>$23.99</span>
+                <button>
+                  <span class="visually-hidden">Remove product from cart</span
+                  ><span class="material-symbols-outlined" aria-hidden="true"> delete </span>
+                </button>
+              </li>
+            </ul>
           </div>
-          <div class="contact-info | flex flex--col bg-dark">
-            <div class="flow-content">
-              <h2>Address</h2>
-              <div>
-                Møllerheia 81, Grimstad,<br />
-                4878, Norway
-              </div>
-            </div>
-            <div class="flow-content">
-              <h2>Phone</h2>
-              <div>+47 942 48 748</div>
-            </div>
-            <div class="flow-content">
-              <h2>Email</h2>
-              <div>ghsupport@gamehub.com</div>
-            </div>
+          <div class="summary | bg-card card">
+            <h2>Order summary</h2>
+            <table>
+              <tr>
+                <td>Price</td>
+                <td>$123.97</td>
+              </tr>
+              <tr>
+                <td>Discount</td>
+                <td>-$0</td>
+              </tr>
+              <tr>
+                <td class="h3">Total</td>
+                <td class="h3">$123.97</td>
+              </tr>
+            </table>
+            <button class="btn">Go to checkout</button>
           </div>
         </div>
       </main>

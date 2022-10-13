@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!-- <html lang="en" class=""> -->
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <meta name="description" content="" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <!-- Css -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/nav-footer.css" />
+    <link rel="stylesheet" href="./css/checkout.css" />
+  </head>
+  <body>
+    <div class="min-full-height">
+      <a href="#main-content" class="skip-nav">Skip to content</a>
+      <nav class="sm-nav | bg-dark">
+        <a href="./index.html"><img src="./assets/logo/logo.png" alt="Gamehub" /></a>
+      </nav>
+
+      <main class="checkout purchase-checkout | container grid" id="main-content">
+        <h1>Checkout</h1>
+        <form action="" class="bg-card card">
+          <div class="progress-bar">
+            <ol class="flex">
+              <li class="step completed">log in</li>
+              <li class="step active">Personal details</li>
+              <li class="step">Payment & Confirm</li>
+            </ol>
+          </div>
+
+          <fieldset class="login flex flex--col">
+            <legend class="h2">log in</legend>
+            <label for="email">Email</label>
+            <input type="email" id="email" required />
+            <label for="password">Password</label>
+            <input type="password" id="password" required />
+            <button class="btn">Log in</button>
+          </fieldset>
+
+          <fieldset class="details flex flex--col current-step">
+            <legend class="h2">Personal details</legend>
+            <div class="details flex flex--col">
+              <label for="first-name">First name *</label>
+              <input type="text" id="first-name" required />
+              <label for="last-name">Last name *</label>
+              <input type="text" id="last-name" required />
+              <label for="phone">Phone number</label>
+              <input type="text" id="phone" />
+              <label for="email">Email *</label>
+              <input type="email" id="email" required />
+            </div>
+            <div class="address flex flex--col">
+              <label for="address-one">Address field 1 *</label>
+              <input type="text" id="address-one" required />
+              <label for="Address-two">Address field 2</label>
+              <input type="text" id="Address-two" />
+              <div class="grid grid--even-columns">
+                <div>
+                  <label for="zipcode">Postal code / Zip code *</label>
+                  <input type="text" id="zipcode" required />
+                </div>
+                <div>
+                  <label for="city">City *</label>
+                  <input type="text" id="city" required />
+                </div>
+              </div>
+              <label for="country">Country *</label>
+              <input type="text" id="country" required />
+            </div>
+            <button class="btn">Go to payment</button>
+          </fieldset>
+
+          <fieldset class="payment flex flex--col">
+            <legend class="h2">Payment and confirmation</legend>
+            <label for="cardnr">Credit Card Number</label>
+            <input type="text" id="cardnr" required />
+            <div class="grid grid--even-columns">
+              <div>
+                <label for="expiration-date">Expiration date (mm/yy)</label>
+                <input type="text" id="expiration-date" required />
+              </div>
+              <div>
+                <label for="security-code">Security Code *</label>
+                <input type="text" id="security-code" required />
+              </div>
+              <button class="btn">Pay $123.97</button>
+            </div>
+          </fieldset>
+        </form>
+        <div class="summary | bg-card card">
+          <h2>Order summary</h2>
+          <table>
+            <tr>
+              <td>Cyberpunk 2077</td>
+              <td>$59.99</td>
+            </tr>
+            <tr>
+              <td>The Witcher 3: Wild hunt</td>
+              <td>$39.99</td>
+            </tr>
+            <tr>
+              <td>Ori and the Will of the Wisps</td>
+              <td>$23.99</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td>Price</td>
+              <td>$123.97</td>
+            </tr>
+            <tr>
+              <td>Discount</td>
+              <td>-$0</td>
+            </tr>
+            <tr>
+              <td class="h3">Total</td>
+              <td class="h3">$123.97</td>
+            </tr>
+          </table>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

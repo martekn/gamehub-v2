@@ -1,0 +1,20 @@
+.account-sections > div {
+  grid-auto-rows: 1fr;
+}
+section {
+  padding: var(--space-500) var(--space-400);
+}
+
+section > :nth-last-child(2) {
+  margin-bottom: var(--space-500);
+}
+
+section ul {
+  margin-top: auto;
+}
+
+@media (min-width: 50em) {
+  section {
+    padding: var(--space-600);
+  }
+}
