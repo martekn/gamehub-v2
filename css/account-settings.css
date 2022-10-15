@@ -25,7 +25,7 @@ legend {
   margin: 0;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 45em) {
   form,
   section {
     padding: var(--space-600);

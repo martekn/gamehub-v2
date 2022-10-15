@@ -17,7 +17,7 @@
   padding-block: var(--space-600);
 }
 
-@media (min-width: 50em) {
+@media (min-width: 45em) {
   .contact {
     grid-template-columns: 2fr 1fr;
     gap: 0;

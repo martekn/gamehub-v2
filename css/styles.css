@@ -87,7 +87,7 @@
 
   /* 1.5 Other
 -------------------------*/
-  --box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  --box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   --border-radius: 3px;
 }
 
@@ -266,8 +266,15 @@ h3,
   font-weight: var(--fw-medium);
 }
 
+.text-450 {
+  font-size: var(--fs-450);
+}
 .text-500 {
   font-size: var(--fs-500);
+}
+
+.text-600 {
+  font-size: var(--fs-600);
 }
 
 .text-700 {
@@ -344,7 +351,7 @@ This keeps things consistent regardless of the formatting context */
 }
 
 .container {
-  --max-width: 1200px;
+  --max-width: 1300px;
   --screen-edge: var(--space-375);
 
   width: min(var(--max-width), 100% - (var(--screen-edge) * 2));
@@ -370,7 +377,7 @@ This keeps things consistent regardless of the formatting context */
   grid-auto-flow: column;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 45em) {
   .grid--even-col2 {
     grid-template-columns: 1fr 1fr;
   }
@@ -383,12 +390,12 @@ This keeps things consistent regardless of the formatting context */
 .games-container {
   --gap: var(--space-450);
 }
-@media (min-width: 50em) {
+@media (min-width: 45em) {
   .games-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 70em) {
+@media (min-width: 90em) {
   .games-container {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -406,6 +413,7 @@ This keeps things consistent regardless of the formatting context */
   padding: var(--space-350) var(--space-600);
   font-size: var(--fs-450);
   font-weight: var(--fw-medium);
+  text-align: center;
   color: var(--btn-fg, var(--clr-neutral-100));
   background-color: var(--btn-bg, var(--clr-theme-primary-400));
   border: none;
@@ -445,6 +453,118 @@ textarea {
   padding: var(--space-350);
   border-radius: var(--border-radius);
   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.267);
+}
+
+/* 7.3. Card
+-------------------------*/
+.card {
+  display: grid;
+  grid-template-rows: 5fr 3fr;
+}
+.card .image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../assets/covers/image1.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.card img {
+  position: absolute;
+  height: 80%;
+  object-fit: cover;
+}
+
+.card .info {
+  padding: var(--space-400);
+  --flow-space: var(--space-375);
+}
+
+.card h3,
+.card h2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card .pricing {
+  align-items: end;
+}
+
+.card .pricing > div {
+  --gap: 0;
+  text-align: right;
+}
+
+.card .discount {
+  display: block;
+  background-color: var(--clr-theme-primary-400);
+  color: var(--clr-neutral-100);
+  text-align: center;
+  line-height: 1;
+  padding: var(--space-350) var(--space-375);
+  justify-self: start;
+  border-radius: var(--border-radius);
+}
+.card .original-price {
+  color: var(--clr-font-contrast);
+}
+
+.card .current-price,
+.card .discount {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-bold);
+}
+
+.card--owned {
+  grid-template-rows: 2fr 1fr;
+}
+
+.card--owned .cta-group {
+  --gap: var(--space-375);
+}
+
+.card--owned .btn {
+  padding: calc(var(--space-350) / 2) var(--space-400);
+  font-size: var(--fs-400);
+}
+
+/* 7.4. Search
+-------------------------*/
+.search {
+  background-color: var(--clr-bg);
+  border-radius: var(--border-radius);
+  box-shadow: inset var(--box-shadow);
+  border: 1px solid var(--clr-border-contrast);
+}
+
+.search input:focus-visible,
+.search button:focus-visible {
+  outline: 1px solid var(--clr-theme-secondary-400);
+  color: var(--clr-font);
+}
+
+.search input:focus + button {
+  color: var(--clr-font);
+}
+
+.search button,
+.search input {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.search button {
+  display: grid;
+  place-items: center;
+  color: var(--clr-font-contrast);
+  padding: var(--space-350);
+  border-radius: var(--border-radius);
 }
 
 /* #endregion */
