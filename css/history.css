@@ -30,7 +30,7 @@ table {
   width: 100%;
 }
 
-@media (max-width: 50em) {
+@media (max-width: 45em) {
   .history th:nth-of-type(1n + 3),
   .history tr > td:nth-of-type(1n + 3) {
     display: none;
@@ -61,7 +61,7 @@ table {
   text-align: right;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 45em) {
   .table-wrapper {
     padding-block: var(--space-500);
     margin-left: auto;

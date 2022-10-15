@@ -55,7 +55,7 @@ footer {
   font-weight: var(--fw-bold);
 }
 
-@media (min-width: 50em) {
+@media (min-width: 45em) {
   .system-req {
     padding-block: var(--space-600);
   }

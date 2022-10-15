@@ -13,7 +13,7 @@ section ul {
   margin-top: auto;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 45em) {
   section {
     padding: var(--space-600);
   }

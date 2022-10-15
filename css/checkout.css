@@ -23,7 +23,7 @@ legend {
 label {
   display: block;
 }
-@media (min-width: 50em) {
+@media (min-width: 45em) {
   .checkout {
     grid-template-columns: 4fr 3fr;
     align-items: start;

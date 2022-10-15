@@ -25,32 +25,88 @@
 .banner--image-bg::before {
   content: "";
   display: block;
-  background: linear-gradient(to top, rgb(0 0 0 / 0.6) 50%, rgb(0 0 0 / 0) 100%);
+  background: linear-gradient(to top, rgb(0 0 0 / 0.6) 50%, rgb(0 0 0 / 0) 80%);
   position: absolute;
   inset: 0;
 }
-.sale {
-  background-image: url(../assets/banner/monthly-deal.jpg);
+
+.sale::before {
+  background: rgb(0 0 0 / 0.6);
 }
 
 .pre-order {
   background-image: url(../assets/banner/pre-order.jpg);
 }
 
+.sale {
+  background-image: url(../assets/banner/monthly-deal.jpg);
+  align-items: center;
+}
+
 .banner > div {
   padding: var(--space-500) var(--screen-edge);
 }
+
 .pre-order > div {
-  padding-top: calc(var(--space-1000) * 1.5);
+  padding-top: calc(var(--space-1000) * 2);
 }
 
-@media (max-width: 50em) {
+.sale .content {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  --gap: var(--space-350);
+  align-items: start;
+}
+
+.sale h2 {
+  font-weight: var(--fw-normal);
+}
+
+.sale .subtitle {
+  margin-bottom: calc(var(--space-500) - var(--gap));
+}
+.sale h2,
+.sale .subtitle {
+  grid-column: span 2;
+}
+
+.sale .price {
+  --gap: 0;
+  line-height: 1.2;
+}
+
+.sale .original-price {
+  color: var(--clr-neutral-200);
+}
+.sale .new-price {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-600);
+}
+
+.sale .btn {
+  align-self: end;
+  justify-self: end;
+}
+
+.resell div {
+  align-items: center;
+}
+
+.resell img {
+  height: 100px;
+}
+
+@media (max-width: 45em) {
   .banner {
     width: min(var(--max-width), 100%);
   }
+
+  .pre-order .btn {
+    width: 100%;
+  }
 }
 
-@media (min-width: 50em) {
+@media (min-width: 45em) {
   .banner {
     border-radius: var(--border-radius);
   }
@@ -58,13 +114,25 @@
   .banner > div {
     padding: var(--space-700);
   }
+  .banner:not(.resell) > div {
+    max-width: 80%;
+  }
 
   .banner--image-bg::before {
-    background: linear-gradient(to right, rgb(0 0 0 / 0.6) 50%, rgb(0 0 0 / 0) 100%);
+    background: linear-gradient(to right, rgb(0 0 0 / 0.6) 75%, rgb(0 0 0 / 0) 100%);
   }
 
   .pre-order {
-    margin-top: vaR(--space-600);
+    margin-top: var(--space-600);
+  }
+}
+@media (min-width: 60em) {
+  .banner:not(.resell) > div {
+    max-width: 50%;
+  }
+
+  .banner--image-bg::before {
+    background: linear-gradient(to right, rgb(0 0 0 / 0.6) 45%, rgb(0 0 0 / 0) 70%);
   }
 }
 

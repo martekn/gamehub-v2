@@ -266,8 +266,15 @@ h3,
   font-weight: var(--fw-medium);
 }
 
+.text-450 {
+  font-size: var(--fs-450);
+}
 .text-500 {
   font-size: var(--fs-500);
+}
+
+.text-600 {
+  font-size: var(--fs-600);
 }
 
 .text-700 {
@@ -370,7 +377,7 @@ This keeps things consistent regardless of the formatting context */
   grid-auto-flow: column;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 45em) {
   .grid--even-col2 {
     grid-template-columns: 1fr 1fr;
   }
@@ -383,7 +390,7 @@ This keeps things consistent regardless of the formatting context */
 .games-container {
   --gap: var(--space-450);
 }
-@media (min-width: 50em) {
+@media (min-width: 45em) {
   .games-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -406,6 +413,7 @@ This keeps things consistent regardless of the formatting context */
   padding: var(--space-350) var(--space-600);
   font-size: var(--fs-450);
   font-weight: var(--fw-medium);
+  text-align: center;
   color: var(--btn-fg, var(--clr-neutral-100));
   background-color: var(--btn-bg, var(--clr-theme-primary-400));
   border: none;

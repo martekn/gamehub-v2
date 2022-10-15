@@ -16,7 +16,7 @@
   grid-column: 2;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 45em) {
   .shopping-cart {
     grid-template-columns: 2fr 1fr;
     align-items: start;
