@@ -26,6 +26,7 @@
     <!-- Css -->
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/nav-footer.css" />
+    <link rel="stylesheet" href="./css/games-list.css" />
   </head>
   <body>
     <div class="min-full-height">
@@ -90,16 +91,24 @@
           <div class="container flex">
             <span>You are here:</span>
             <ol class="flex">
-              <li><a href="#">Item 1</a></li>
-              <li><a href="#">Item 2</a></li>
-              <li><a href="#" aria-current="Item 3">Item 3</a></li>
+              <li><a href="./index.html">Homepage</a></li>
+              <li><a href="./games-all.html" aria-current="Games">Games</a></li>
             </ol>
           </div>
         </nav>
 
-        <div class="container">
+        <div class="game-list | container grid grid--even-col2">
           <h1>All games</h1>
-
+          <div class="filter | flex flex--col">
+            <!-- ! Temporary filter, to be replaced -->
+            <label for="">Filter by:</label>
+            <select name="" id="">
+              <option value="">Popularity</option>
+              <option value="">Latest</option>
+              <option value="">Price</option>
+              <option value="">Name</option>
+            </select>
+          </div>
           <div class="games-container | grid">
             <a href="./product.html" class="card | bg-card rounded-corners shadow">
               <div class="image-container">

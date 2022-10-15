@@ -1,0 +1,68 @@
+/** 1. Library
+-------------------------*/
+/* #region */
+.library {
+  --flow-space: var(--space-450);
+}
+
+.search-library {
+  grid-column: 1;
+}
+
+.search-library > div {
+  --gap: 0;
+}
+
+.search-library input {
+  width: 100%;
+}
+
+@media (min-width: 45em) {
+  .library {
+    --flow-space: var(--space-500);
+  }
+
+  .search-library {
+    max-width: 500px;
+  }
+}
+
+/* #endregion */
+
+/** 1. Games lists
+-------------------------*/
+/* #region */
+.game-list {
+  --gap: var(--space-450);
+}
+
+/* 1.1 Filter (temporary)
+-------------------------*/
+.filter {
+  --gap: 0;
+  justify-self: start;
+}
+
+.filter label {
+  color: var(--clr-font-contrast);
+}
+select {
+  background: none;
+  background-color: var(--clr-bg);
+  border: none;
+  color: var(--clr-font);
+}
+
+@media (min-width: 45em) {
+  .game-list {
+    --gap: var(--space-500);
+  }
+  .filter {
+    justify-self: end;
+  }
+
+  .game-list .games-container {
+    grid-column: span 2;
+  }
+}
+/* #endregion */

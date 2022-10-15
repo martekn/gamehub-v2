@@ -532,4 +532,39 @@ textarea {
   padding: calc(var(--space-350) / 2) var(--space-400);
   font-size: var(--fs-400);
 }
+
+/* 7.4. Search
+-------------------------*/
+.search {
+  background-color: var(--clr-bg);
+  border-radius: var(--border-radius);
+  box-shadow: inset var(--box-shadow);
+  border: 1px solid var(--clr-border-contrast);
+}
+
+.search input:focus-visible,
+.search button:focus-visible {
+  outline: 1px solid var(--clr-theme-secondary-400);
+  color: var(--clr-font);
+}
+
+.search input:focus + button {
+  color: var(--clr-font);
+}
+
+.search button,
+.search input {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.search button {
+  display: grid;
+  place-items: center;
+  color: var(--clr-font-contrast);
+  padding: var(--space-350);
+  border-radius: var(--border-radius);
+}
+
 /* #endregion */
