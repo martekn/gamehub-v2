@@ -244,5 +244,80 @@
 /* #region */
 footer {
   margin-top: var(--space-1000);
+  padding-block: var(--space-500) var(--space-375);
 }
+
+footer > div {
+  --gap: var(--space-500);
+  justify-content: center;
+  text-align: center;
+}
+
+footer .logo {
+  display: inline-block;
+  width: fit-content;
+  justify-self: center;
+}
+
+/* 3.1 Theme toggle
+-------------------------*/
+.theme-toggle {
+  display: flex;
+  gap: var(--space-400);
+  align-items: center;
+  padding-inline: var(--space-400);
+  width: fit-content;
+}
+
+.pill {
+  height: 1.3rem;
+  aspect-ratio: 1.8;
+  outline: 2px solid var(--clr-neutral-100);
+  position: relative;
+  border-radius: 30em;
+}
+
+.ball {
+  background-color: var(--clr-neutral-100);
+  height: 1rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin: auto 0;
+  position: absolute;
+
+  top: 50%;
+  left: 8%;
+  bottom: 50%;
+  transform: translate((-50%, -50%));
+
+  transition-duration: 0.2s;
+  transition-property: left, transform;
+}
+
+.theme-toggle[aria-pressed="true"] .ball {
+  left: 50%;
+  top: 50%;
+  left: 50%;
+  bottom: 50%;
+  transform: translate((-50%, -50%));
+}
+
+@media (min-width: 45em) {
+  footer {
+    padding-block: var(--space-600) var(--space-400);
+  }
+  footer > div {
+    --gap: var(--space-500);
+    text-align: left;
+  }
+
+  footer .logo {
+    justify-self: start;
+  }
+
+  footer button {
+    justify-self: end;
+  }
+}
+/* footer .container */
 /* #endregion */
