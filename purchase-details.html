@@ -39,10 +39,12 @@
             aria-expanded="false"
             aria-haspopup="true"
           >
-            <span class="material-symbols-outlined"> menu </span>
+            <span class="material-symbols-outlined | text-600"> menu </span>
           </button>
 
-          <a href="./index.html"><img src="./assets/logo/logo.png" alt="Gamehub" /></a>
+          <div class="logo">
+            <a href="./index.html"><img src="./assets/logo/logo.png" alt="Gamehub" /></a>
+          </div>
 
           <div class="search | flex">
             <input type="text" name="" id="" placeholder="Search..." />
@@ -51,15 +53,18 @@
             </button>
           </div>
 
-          <div>
-            <a href="./account.html" class="user">
-              <!-- <a href="./auth.html?t=login" class="user"> -->
-              <span class="material-symbols-outlined"> person </span> Account
+          <div class="cta-group | flex">
+            <a href="./account.html" class="user | flex">
+              <!-- <a href="./auth.html?t=login" class="user | flex"> -->
+              <span class="material-symbols-outlined | text-550"> person </span> Account
               <!-- <span class="material-symbols-outlined"> login </span> Log in -->
             </a>
-            <a href="./shopping-cart.html" aria-hidden="true" aria-label="Shopping cart" class="cart">
-              <span class="material-symbols-outlined"> shopping_cart </span>
-              <span class="counter">3</span>
+            <a href="./shopping-cart.html" class="cart | flex">
+              <span class="material-symbols-outlined | text-550"> shopping_cart </span>
+              <span class="counter | rounded-corners">
+                <span class="visually-hidden">Items in cart:</span>
+                <span id="count">0</span>
+              </span>
             </a>
           </div>
         </div>
@@ -72,7 +77,7 @@
               aria-expanded="false"
               aria-haspopup="true"
             >
-              <span class="material-symbols-outlined"> close </span>
+              <span class="material-symbols-outlined text-550"> close </span>
             </button>
             <ul id="primary-navigation" class="primary-navigation | flex" aria-label="primary navigation">
               <li><a href="./index.html">Home</a></li>
@@ -91,9 +96,10 @@
           <div class="container flex">
             <span>You are here:</span>
             <ol class="flex">
-              <li><a href="#">Item 1</a></li>
-              <li><a href="#">Item 2</a></li>
-              <li><a href="#" aria-current="Item 3">Item 3</a></li>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./account.html">My account</a></li>
+              <li><a href="./purchase-history.html">Purchase history</a></li>
+              <li><a href="./purchase-details.html" aria-current="Order: 12345678">Order: 12345678</a></li>
             </ol>
           </div>
         </nav>
@@ -164,14 +170,13 @@
     </div>
 
     <footer class="primary-footer | bg-dark">
-      <div class="container">
-        <div class="grid grid--even-columns">
-          <a href="./index.html"><img src="./assets/logo/logo.png" alt="Gamehub" /></a>
-          <button class="btn theme-toggle" aria-pressed="false" aria-label="theme toggle">
-            Darkmode
-            <span class="pill d-block" aria-hidden="true"><span class="ball | d-block"></span> </span>
-          </button>
-        </div>
+      <div class="container grid grid--even-col2">
+        <a href="./index.html" class="logo"><img src="./assets/logo/logo.png" alt="Gamehub" /></a>
+        <button class="btn theme-toggle" aria-pressed="false" aria-label="theme toggle">
+          <span>Darkmode</span>
+          <span class="pill d-block" aria-hidden="true"><span class="ball | d-block"></span> </span>
+        </button>
+
         <span>Copyright @ Martemkn 2022</span>
       </div>
     </footer>
