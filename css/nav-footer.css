@@ -203,15 +203,38 @@
 /* #region */
 .secondary-navigation {
   margin-bottom: var(--space-500);
+  padding-block: var(--space-375);
+  border-bottom: 1px solid var(--clr-table);
+}
+.secondary-navigation > div {
+  --gap: var(--space-350);
 }
 .secondary-navigation span {
   font-weight: var(--fw-medium);
 }
 
+.secondary-navigation li::after {
+  content: "\276F";
+  margin-left: var(--gap, var(--space-400));
+}
+
+.secondary-navigation a {
+  color: var(--clr-font);
+}
+.secondary-navigation a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 50em) {
   .secondary-navigation ol > *:not(:nth-last-child(2)),
-  .secondary-navigation span {
+  .secondary-navigation span,
+  .secondary-navigation li::after {
     display: none;
+  }
+
+  .secondary-navigation li a::before {
+    content: "\276E";
+    margin-right: var(--gap, var(--space-400));
   }
 }
 /* #endregion */
