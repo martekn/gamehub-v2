@@ -1,3 +1,6 @@
+.account-sections {
+  gap: var(--space-500);
+}
 .account-sections > div {
   grid-auto-rows: 1fr;
 }
@@ -14,6 +17,14 @@ section ul {
 }
 
 @media (min-width: 45em) {
+  .account-sections > button {
+    justify-self: end;
+    align-self: end;
+  }
+  .account-sections > div {
+    grid-column: span 2;
+  }
+
   section {
     padding: var(--space-600);
   }

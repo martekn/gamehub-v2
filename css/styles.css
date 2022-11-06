@@ -154,14 +154,25 @@ a {
   text-decoration: none;
 }
 
-body {
-  line-height: 1.6;
-}
-
 img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+legend {
+  padding: 0;
+  margin: 0;
+}
+
+label {
+  display: block;
 }
 
 input,
@@ -196,7 +207,7 @@ body {
   font-family: var(--ff-base);
   font-size: var(--fs-400);
   font-weight: var(--fw-regular);
-  line-height: 1.6; /*! uncertain number*/
+  line-height: 1.6;
   color: var(--clr-font);
   background-color: var(--clr-bg);
   min-height: 100vh;
@@ -293,6 +304,37 @@ h3,
 .text-bold {
   font-weight: var(--fw-bold);
 }
+
+.link {
+  color: var(--clr-theme-secondary-400);
+  background-color: transparent;
+  border: none;
+}
+
+[class*="link--"] {
+  display: flex;
+  gap: var(--space-350);
+}
+[class*="link--"]::before,
+[class*="link--"]::after {
+  font-family: "Material Icons";
+}
+.link--back::before {
+  content: "\e5c4";
+}
+
+.link--link::before {
+  content: "\e157";
+  transform: rotate(45deg);
+}
+
+.link--logout::before {
+  content: "\e9ba";
+}
+
+.link--arrow::after {
+  content: "\e409";
+}
 /* #endregion */
 
 /** 5. Utility
@@ -349,10 +391,27 @@ h3,
   overflow: hidden;
 }
 
+/** 6. Layout
+-------------------------*/
+/* #region */
 /* Child elements that has a previous sibling gains margin-top,
 This keeps things consistent regardless of the formatting context */
 .flow-content > * + * {
   margin-top: var(--flow-space, var(--space-400));
+}
+
+form.flow-content button {
+  --flow-space: var(--space-450);
+}
+
+.flow-content.flow-form label,
+.flow-content.flow-form button,
+.flow-content.flow-form .form-section {
+  --flow-space: var(--space-450);
+}
+
+.flow-content.flow-form input {
+  --flow-space: var(--space-350);
 }
 
 .container {
@@ -389,12 +448,20 @@ This keeps things consistent regardless of the formatting context */
 }
 /* #endregion */
 
-/** 6. Layout
--------------------------*/
-/* #region */
+.form-section {
+  display: flex;
+  gap: var(--gap, var(--space-450));
+  flex-wrap: wrap;
+}
+
+.form-section > * {
+  flex: 1 0 auto;
+}
+
 .games-container {
   --gap: var(--space-450);
 }
+
 @media (min-width: 45em) {
   .games-container {
     grid-template-columns: repeat(2, 1fr);

@@ -1,8 +1,6 @@
 .account-settings > div {
   gap: var(--space-600);
-}
-.account-settings label {
-  display: block;
+  margin-top: var(--space-500);
 }
 
 .account-settings input {
@@ -14,15 +12,13 @@ section {
   padding: var(--space-450) var(--space-500);
 }
 
-fieldset {
-  margin: 0;
-  padding: 0;
-  border: none;
+.information {
+  --flow-space: var(--space-600);
 }
 
-legend {
-  padding: 0;
-  margin: 0;
+form.grid,
+fieldset.grid {
+  gap: 0;
 }
 
 @media (min-width: 45em) {
@@ -30,13 +26,18 @@ legend {
   section {
     padding: var(--space-600);
   }
+
+  form button {
+    justify-self: end;
+  }
+
   .account-settings > div {
     grid-template-rows: auto 1fr;
     align-items: start;
     gap: var(--space-700);
   }
 
-  h1 {
+  .account-settings h1 {
     grid-column: span 2;
   }
 

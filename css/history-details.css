@@ -1,20 +1,32 @@
-th,
-td {
-  text-align: left;
-  vertical-align: top;
-}
-.history th,
-.history td {
-  padding: var(--space-375);
-}
-
+/** 1. General
+-------------------------*/
+/* #region */
 table {
   width: 100%;
   border-collapse: collapse;
 }
 
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+}
+
 .odd-table-rows > :nth-child(odd) {
   background-color: var(--clr-table);
+}
+
+.history > :nth-child(2),
+.order-details > :nth-child(2) {
+  margin-top: var(--space-500);
+}
+
+/** 1. History
+-------------------------*/
+/* #region */
+.history th,
+.history td {
+  padding: var(--space-375);
 }
 
 .history td > span {
@@ -26,7 +38,7 @@ table {
   padding-right: var(--space-500);
 }
 
-.products {
+.history .products {
   width: 100%;
 }
 
@@ -41,16 +53,12 @@ table {
   }
 }
 
+/** 1. Details
+-------------------------*/
+/* #region */
+
 .order-details {
   --max-width: 900px;
-}
-.table-wrapper {
-  padding-block: var(--space-450);
-  border-top: 1px solid var(--clr-table);
-}
-
-.table-wrapper:last-of-type {
-  border-bottom: 1px solid var(--clr-table);
 }
 
 .order-details table :first-child {
@@ -61,22 +69,31 @@ table {
   text-align: right;
 }
 
+.order-details .table-wrapper {
+  padding-block: var(--space-450);
+  border-top: 1px solid var(--clr-table);
+}
+
+.order-details .table-wrapper:last-of-type {
+  border-bottom: 1px solid var(--clr-table);
+}
+
 @media (min-width: 45em) {
-  .table-wrapper {
+  .order-details .table-wrapper {
     padding-block: var(--space-500);
     margin-left: auto;
   }
 
-  .details {
+  .order-details .details {
     width: 20rem;
     justify-self: flex-start;
   }
-  .pricing {
+  .order-details .pricing {
     width: 20rem;
     justify-self: flex-end;
   }
 
-  .details tr {
+  .order-details .details tr {
     display: table-row;
   }
 
