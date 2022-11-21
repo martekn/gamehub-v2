@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Document</title>
-    <meta name="description" content="" />
+    <title>Cart | Gamehub</title>
+    <meta name="description" content="Review the items in your cart before checkout" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,8 +26,6 @@
 
     <!-- Css -->
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/nav-footer.css" />
-    <link rel="stylesheet" href="./css/cart.css" />
   </head>
   <body>
     <div class="min-full-height">
@@ -48,7 +46,8 @@
           </div>
 
           <div class="search | flex">
-            <input type="text" name="" id="" placeholder="Search..." />
+            <label for="search-games" class="visually-hidden">Search for games</label>
+            <input type="text" name="search-games" id="search-games" placeholder="Search..." />
             <button>
               <span class="material-symbols-outlined"> search </span>
             </button>
@@ -86,7 +85,7 @@
               <li><a href="./games-preorder.html">Pre-orders</a></li>
               <li><a href="./games-deals.html">Special deals</a></li>
               <li><a href="./faq.html">F.A.Q.</a></li>
-              <li><a href="./contact.html" class="active">Contact us</a></li>
+              <li><a href="./contact.html">Contact us</a></li>
             </ul>
           </div>
         </nav>
@@ -103,61 +102,68 @@
           </div>
         </nav>
 
-        <div class="shopping-cart | grid container">
+        <div class="cart-page | grid container">
           <h1>My cart</h1>
-          <div class="cart-items | bg-card rounded-corners shadow">
-            <div class="cart-header | grid" aria-hidden="true">
+          <div class="shopping-cart | bg-card rounded-corners shadow">
+            <div class="header | grid" aria-hidden="true">
               <span class="h3">Product(s)</span><span class="h3">Price</span><span class="h3">Remove</span>
             </div>
-            <ul aria-label="Products in cart with price and remove from cart option">
-              <li class="cart-item | grid">
+            <ul class="" aria-label="Products in cart with price and remove from cart option">
+              <li class="grid">
                 <img src="./assets/covers/image4.jpg" alt="" />
-                <span class="product-name">Cyberpunk 2077</span>
+                <span class="name">Cyberpunk 2077</span>
 
-                <span class="product-price"><span class="visually-hidden">Product price:</span>$59.99</span>
-                <button>
-                  <span class="visually-hidden">Remove product from cart</span
-                  ><span class="material-symbols-outlined" aria-hidden="true"> delete </span>
+                <span class="price">
+                  <span class="visually-hidden">Product price:</span>
+                  $59.99
+                </span>
+                <button class="btn--transparent">
+                  <span class="visually-hidden">Remove product from cart</span>
+                  <span class="material-symbols-outlined" aria-hidden="true"> remove_shopping_cart </span>
                 </button>
               </li>
-              <li class="cart-item | grid">
+              <li class="grid">
                 <img src="./assets/covers/image11.jpg" alt="" />
-                <span class="product-name">The Witcher 3: Wild Hunt</span>
+                <span class="name">The Witcher 3: Wild Hunt</span>
 
-                <span class="product-price"><span class="visually-hidden">Product price:</span>$39.99</span>
-                <button>
-                  <span class="visually-hidden">Remove product from cart</span
-                  ><span class="material-symbols-outlined" aria-hidden="true"> delete </span>
+                <span class="price"
+                  ><span class="visually-hidden">Product price:</span>
+                  $39.99
+                </span>
+                <button class="btn--transparent">
+                  <span class="visually-hidden">Remove product from cart</span>
+                  <span class="material-symbols-outlined" aria-hidden="true"> remove_shopping_cart </span>
                 </button>
               </li>
-              <li class="cart-item | grid">
+              <li class="grid">
                 <img src="./assets/covers/image13.jpg" alt="" />
-                <span class="product-name">Ori and the Will of the Wisps</span>
-                <span class="product-price"><span class="visually-hidden">Product price:</span>$23.99</span>
-                <button>
-                  <span class="visually-hidden">Remove product from cart</span
-                  ><span class="material-symbols-outlined" aria-hidden="true"> delete </span>
+                <span class="name">Ori and the Will of the Wisps</span>
+                <span class="price">
+                  <span class="visually-hidden">Product price:</span>
+                  $23.99
+                </span>
+                <button class="btn--transparent">
+                  <span class="visually-hidden">Remove product from cart</span>
+                  <span class="material-symbols-outlined" aria-hidden="true"> remove_shopping_cart </span>
                 </button>
               </li>
             </ul>
           </div>
-          <div class="summary | bg-card rounded-corners shadow">
-            <h2>Order summary</h2>
-            <table>
-              <tr>
-                <td>Price</td>
-                <td>$123.97</td>
-              </tr>
-              <tr>
-                <td>Discount</td>
-                <td>-$0</td>
-              </tr>
-              <tr>
-                <td class="h3">Total</td>
-                <td class="h3">$123.97</td>
-              </tr>
-            </table>
-            <a href="./purchase-checkout.html" class="btn">Go to checkout</a>
+
+          <div class="summary | flow-content flow-form bg-card rounded-corners shadow">
+            <div class="main | flow-content flow-form">
+              <dl class="grid">
+                <dt>Price</dt>
+                <dd>$123.97</dd>
+                <dt>Discount</dt>
+                <dd>-$0</dd>
+                <dt class="h3">Total</dt>
+                <dd class="h3">$123.97</dd>
+              </dl>
+              <div class="flow-content">
+                <a href="./purchase-checkout.html" class="btn">Go to checkout</a>
+              </div>
+            </div>
           </div>
         </div>
       </main>
@@ -166,7 +172,7 @@
     <footer class="primary-footer | bg-dark">
       <div class="container grid grid--even-col2">
         <a href="./index.html" class="logo"><img src="./assets/logo/logo.png" alt="Gamehub" /></a>
-        <button class="btn theme-toggle" aria-pressed="false" aria-label="theme toggle">
+        <button class="btn btn--light-focus theme-toggle" aria-pressed="false" aria-label="theme toggle">
           <span>Darkmode</span>
           <span class="pill d-block" aria-hidden="true"><span class="ball | d-block"></span> </span>
         </button>

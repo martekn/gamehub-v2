@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Document</title>
-    <meta name="description" content="" />
+    <title>Ori and the will of the wisps | GameHub</title>
+    <meta
+      name="description"
+      content="Buy new or used version of ori and the will of the wisps, a beautiful game with emotional storytelling"
+    />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,8 +29,6 @@
 
     <!-- Css -->
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/nav-footer.css" />
-    <link rel="stylesheet" href="./css/product.css" />
   </head>
   <body>
     <div class="min-full-height">
@@ -48,7 +49,8 @@
           </div>
 
           <div class="search | flex">
-            <input type="text" name="" id="" placeholder="Search..." />
+            <label for="search-games" class="visually-hidden">Search for games</label>
+            <input type="text" name="search-games" id="search-games" placeholder="Search..." />
             <button>
               <span class="material-symbols-outlined"> search </span>
             </button>
@@ -106,13 +108,14 @@
           </div>
         </nav>
 
-        <div class="product-view | container grid grid--even-col2 flow-content">
+        <div class="product-view | container grid">
           <h1>Ori and the Will of the Wisps</h1>
           <div class="image-viewer | flex flex--col">
             <div class="current-image | grid bg-card rounded-corners shadow">
               <img src="./assets/product/prod-cover.jpg" alt="" />
             </div>
             <div class="slider | flex">
+              <img src="./assets/product/prod-cover.jpg" alt="" />
               <img src="./assets/product/prod-img1.jpg" alt="" />
               <img src="./assets/product/prod-img2.jpg" alt="" />
               <img src="./assets/product/prod-img3.jpg" alt="" />
@@ -121,7 +124,39 @@
               <img src="./assets/product/prod-img6.jpg" alt="" />
             </div>
           </div>
-          <div class="text-content flow-content">
+          <div class="product-info">
+            <div class="price | text-550">$29.99</div>
+            <div class="condition | flow-content">
+              <span class="fg-low-contrast">Condition: <span class="state | text-bold">New</span></span>
+              <ul class="grid grid--even-columns">
+                <li><a href="./product.html" class="active">New</a></li>
+                <li><a href="./product.html" class="">Pre-owned</a></li>
+              </ul>
+            </div>
+            <div><button class="btn">Add to cart</button></div>
+            <div>
+              <section class="rating | flow-content bg-card rounded-corners">
+                <div class="flex">
+                  <h2 class="h3">Rating</h2>
+                  <span class="score | text-450 grid">88</span>
+                </div>
+                <footer>
+                  <div>Metacritic.com</div>
+                  <div>Updated 20.11.2021</div>
+                </footer>
+              </section>
+            </div>
+            <dl class="grid">
+              <dt>Genre</dt>
+              <dd>Adventure, platform</dd>
+              <dt>Release date</dt>
+              <dd>March 10, 2020</dd>
+              <dt>Developer</dt>
+              <dd>Moon Studios</dd>
+            </dl>
+          </div>
+          <section class="about flow-content">
+            <h2>About the game</h2>
             <p>
               The little spirit Ori is no stranger to peril, but when a fateful flight puts the owlet Ku in harm’s way,
               it will take more than bravery to bring a family back together, heal a broken land, and discover Ori’s
@@ -134,74 +169,77 @@
               Wisps continues the Moon Studios tradition of tightly crafted platforming action and deeply emotional
               storytelling.
             </p>
-          </div>
-          <a href="#system-req" class="link link--arrow">See System requirements</a>
-          <div class="product-cta-group grid">
-            <div class="custom-select bg-">custom select placeholder</div>
-            <button class="btn">Add to cart</button>
-          </div>
-        </div>
+          </section>
 
-        <section id="system-req" class="system-req | bg-card">
-          <div class="container grid grid--even-col2">
+          <section class="system-req flow-content">
             <h2>System requirements</h2>
-            <div class="req-container | flow-content">
+            <section class="flow-content">
               <h3>Minimum requirements:</h3>
-              <ul class="flow-content">
-                <li class="flex flex--col">
-                  <span class="spec-title">OS:</span><span class="spec">Windows 10 Version 18362.0 or higher</span>
-                </li>
-                <li class="flex flex--col">
-                  <span class="spec-title">Processor:</span
-                  ><span class="spec"> AMD Athlon X4 | Intel Core i5 4460</span>
-                </li>
-                <li class="flex flex--col">
-                  <span class="spec-title">Memory:</span><span class="spec"> 8 GB RAM</span>
-                </li>
-                <li class="flex flex--col">
-                  <span class="spec-title">Graphics:</span><span class="spec"> Nvidia GTX 950 | AMD R7 370</span>
-                </li>
-                <li class="flex flex--col">
-                  <span class="spec-title">DirectX:</span><span class="spec"> Version 11</span>
-                </li>
-                <li class="flex flex--col">
-                  <span class="spec-title">Storage:</span><span class="spec"> 20 GB available space</span>
-                </li>
-              </ul>
-            </div>
-            <div class="req-container | flow-content">
-              <h3>Recommended:</h3>
-              <ul class="flow-content">
-                <li class="flex flex--col">
-                  <span class="spec-title">OS:</span><span class="spec">Windows 10 Version 18362.0 or higher</span>
-                </li>
-                <li class="flex flex--col">
-                  <span class="spec-title">Processor:</span
-                  ><span class="spec"> AMD Athlon X4 | Intel Core i5 4460</span>
-                </li>
-                <li class="flex flex--col">
-                  <span class="spec-title">Memory:</span><span class="spec"> 8 GB RAM</span>
-                </li>
-                <li class="flex flex--col">
-                  <span class="spec-title">Graphics:</span><span class="spec"> Nvidia GTX 950 | AMD R7 370</span>
-                </li>
-                <li class="flex flex--col">
-                  <span class="spec-title">DirectX:</span><span class="spec"> Version 11</span>
-                </li>
-                <li class="flex flex--col">
-                  <span class="spec-title">Storage:</span><span class="spec"> 20 GB available space</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
+              <dl class="flow-content">
+                <div class="grid">
+                  <dt>OS:</dt>
+                  <dd>Windows 10 Version 18362.0 or higher</dd>
+                </div>
+                <div class="grid">
+                  <dt>Processor:</dt>
+                  <dd>AMD Athlon X4 | Intel Core i5 4460</dd>
+                </div>
+                <div class="grid">
+                  <dt>Memory:</dt>
+                  <dd>8 GB RAM</dd>
+                </div>
+                <div class="grid">
+                  <dt>Graphics:</dt>
+                  <dd>Nvidia GTX 950 | AMD R7 370</dd>
+                </div>
+                <div class="grid">
+                  <dt>DirectX:</dt>
+                  <dd>Version 11</dd>
+                </div>
+                <div class="grid">
+                  <dt>Storage:</dt>
+                  <dd>20 GB available space</dd>
+                </div>
+              </dl>
+            </section>
+            <section class="flow-content">
+              <h3>Recommended requirements:</h3>
+              <dl class="flow-content">
+                <div class="grid">
+                  <dt>OS:</dt>
+                  <dd>Windows 10 Version 18362.0 or higher</dd>
+                </div>
+                <div class="grid">
+                  <dt>Processor:</dt>
+                  <dd>AMD Athlon X4 | Intel Core i5 4460</dd>
+                </div>
+                <div class="grid">
+                  <dt>Memory:</dt>
+                  <dd>8 GB RAM</dd>
+                </div>
+                <div class="grid">
+                  <dt>Graphics:</dt>
+                  <dd>Nvidia GTX 950 | AMD R7 370</dd>
+                </div>
+                <div class="grid">
+                  <dt>DirectX:</dt>
+                  <dd>Version 11</dd>
+                </div>
+                <div class="grid">
+                  <dt>Storage:</dt>
+                  <dd>20 GB available space</dd>
+                </div>
+              </dl>
+            </section>
+          </section>
+        </div>
       </main>
     </div>
 
     <footer class="primary-footer | bg-dark">
       <div class="container grid grid--even-col2">
         <a href="./index.html" class="logo"><img src="./assets/logo/logo.png" alt="Gamehub" /></a>
-        <button class="btn theme-toggle" aria-pressed="false" aria-label="theme toggle">
+        <button class="btn btn--light-focus theme-toggle" aria-pressed="false" aria-label="theme toggle">
           <span>Darkmode</span>
           <span class="pill d-block" aria-hidden="true"><span class="ball | d-block"></span> </span>
         </button>

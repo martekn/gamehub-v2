@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Document</title>
-    <meta name="description" content="" />
+    <title>Games library | Gamehub</title>
+    <meta name="description" content="View all the games you own to either download or sell" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,8 +26,6 @@
 
     <!-- Css -->
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/nav-footer.css" />
-    <link rel="stylesheet" href="./css/games-list.css" />
   </head>
   <body>
     <div class="min-full-height">
@@ -48,7 +46,8 @@
           </div>
 
           <div class="search | flex">
-            <input type="text" name="" id="" placeholder="Search..." />
+            <label for="search-games" class="visually-hidden">Search for games</label>
+            <input type="text" name="search-games" id="search-games" placeholder="Search..." />
             <button>
               <span class="material-symbols-outlined"> search </span>
             </button>
@@ -108,7 +107,7 @@
           <h1>Games library</h1>
 
           <div class="search-library">
-            <label for="library-search">Search for a game you own</label>
+            <label for="library-search">Find a game you own</label>
             <div class="search | flex">
               <input type="text" id="library-search" placeholder="Search..." />
               <button><span class="material-symbols-outlined"> search </span></button>
@@ -116,36 +115,36 @@
           </div>
 
           <div class="games-container | grid">
-            <a href="./product.html" class="card card--owned | bg-card rounded-corners shadow">
+            <div class="card card--owned | bg-card rounded-corners shadow">
               <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
               <div class="info | flow-content">
                 <h2 class="h3">Mass Effect Legendary Edition</h2>
                 <div class="cta-group | flex">
                   <button class="btn">Download</button>
-                  <button class="btn btn--accent">Sell</button>
+                  <a href="./sale-checkout.html" class="btn btn--accent">Sell</a>
                 </div>
               </div>
-            </a>
-            <a href="./product.html" class="card card--owned | bg-card rounded-corners shadow">
+            </div>
+            <div class="card card--owned | bg-card rounded-corners shadow">
               <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
               <div class="info | flow-content">
                 <h2 class="h3">Mass Effect Legendary Edition</h2>
                 <div class="cta-group | flex">
                   <button class="btn">Download</button>
-                  <button class="btn btn--accent">Sell</button>
+                  <a href="./sale-checkout.html" class="btn btn--accent">Sell</a>
                 </div>
               </div>
-            </a>
-            <a href="./product.html" class="card card--owned | bg-card rounded-corners shadow">
+            </div>
+            <div class="card card--owned | bg-card rounded-corners shadow">
               <div class="image-container"><img src="./assets/covers/image1.jpg" alt="" /></div>
               <div class="info | flow-content">
                 <h2 class="h3">Mass Effect Legendary Edition</h2>
                 <div class="cta-group | flex">
                   <button class="btn">Download</button>
-                  <button class="btn btn--accent">Sell</button>
+                  <a href="./sale-checkout.html" class="btn btn--accent">Sell</a>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </main>
@@ -154,7 +153,7 @@
     <footer class="primary-footer | bg-dark">
       <div class="container grid grid--even-col2">
         <a href="./index.html" class="logo"><img src="./assets/logo/logo.png" alt="Gamehub" /></a>
-        <button class="btn theme-toggle" aria-pressed="false" aria-label="theme toggle">
+        <button class="btn btn--light-focus theme-toggle" aria-pressed="false" aria-label="theme toggle">
           <span>Darkmode</span>
           <span class="pill d-block" aria-hidden="true"><span class="ball | d-block"></span> </span>
         </button>

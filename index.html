@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Document</title>
-    <meta name="description" content="" />
+    <title>GameHub</title>
+    <meta
+      name="description"
+      content="We sells pc games with the customers in mind. Focusing on competitive prices, having a big variety of games and the option to resell games."
+    />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,8 +29,6 @@
 
     <!-- Css -->
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/nav-footer.css" />
-    <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
     <div class="min-full-height">
@@ -48,7 +49,8 @@
           </div>
 
           <div class="search | flex">
-            <input type="text" name="" id="" placeholder="Search..." />
+            <label for="search-games" class="visually-hidden">Search for games</label>
+            <input type="text" name="search-games" id="search-games" placeholder="Search..." />
             <button>
               <span class="material-symbols-outlined"> search </span>
             </button>
@@ -95,9 +97,9 @@
       <main class="homepage | flex flex--col" id="main-content">
         <section class="pre-order banner banner--image-bg | container bg-dark shadow">
           <div class="flow-content">
-            <h2 class="text-bold text-800">God of War</h2>
+            <h2 class="text-bold text-700">God of War</h2>
             <p class="text-450">Coming 14th January, 2022</p>
-            <a href="./product.html" class="btn">Pre-order now</a>
+            <a href="./product.html" class="btn btn--light-focus">Pre-order now</a>
           </div>
         </section>
 
@@ -179,7 +181,7 @@
                 <span><s class="original-price">$16.99</s></span>
                 <span class="new-price">$6.79</span>
               </div>
-              <a href="#" class="btn btn--arrow">View</a>
+              <a href="./product.html" class="btn btn--light-focus btn--arrow">View</a>
             </div>
           </div>
         </section>
@@ -252,13 +254,15 @@
 
         <div class="resell banner | bg-dark container shadow">
           <div class="flex">
-            <p class="h1">Get some money back after finishing a game through resell, or buy pre-owned games cheaper</p>
+            <p class="text-550 text-bold">
+              Get some money back after finishing a game through resell, or buy pre-owned games cheaper
+            </p>
             <img src="./assets/banner/resell.png" alt="" />
           </div>
         </div>
 
         <section class="container flow-content">
-          <h2>Best sellers</h2>
+          <h2>Featured</h2>
           <div class="games-container | grid">
             <a href="./product.html" class="card | bg-card rounded-corners shadow">
               <div class="image-container">
@@ -389,7 +393,7 @@
     <footer class="primary-footer | bg-dark">
       <div class="container grid grid--even-col2">
         <a href="./index.html" class="logo"><img src="./assets/logo/logo.png" alt="Gamehub" /></a>
-        <button class="btn theme-toggle" aria-pressed="false" aria-label="theme toggle">
+        <button class="btn btn--light-focus theme-toggle" aria-pressed="false" aria-label="theme toggle">
           <span>Darkmode</span>
           <span class="pill d-block" aria-hidden="true"><span class="ball | d-block"></span> </span>
         </button>

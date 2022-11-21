@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Document</title>
-    <meta name="description" content="" />
+    <title>Games | GameHub</title>
+    <meta
+      name="description"
+      content="GameHub, the universe of games, prides itself on having a huge range of games. Find your next game."
+    />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,8 +29,6 @@
 
     <!-- Css -->
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/nav-footer.css" />
-    <link rel="stylesheet" href="./css/games-list.css" />
   </head>
   <body>
     <div class="min-full-height">
@@ -48,7 +49,8 @@
           </div>
 
           <div class="search | flex">
-            <input type="text" name="" id="" placeholder="Search..." />
+            <label for="search-games" class="visually-hidden">Search for games</label>
+            <input type="text" name="search-games" id="search-games" placeholder="Search..." />
             <button>
               <span class="material-symbols-outlined"> search </span>
             </button>
@@ -105,8 +107,7 @@
 
         <div class="game-list | container grid grid--even-col2">
           <h1>All games</h1>
-          <div class="filter | flex flex--col">
-            <!-- ! Temporary filter, to be replaced -->
+          <div class="filter">
             <label for="">Filter by:</label>
             <select name="" id="">
               <option value="">Popularity</option>
@@ -366,7 +367,7 @@
     <footer class="primary-footer | bg-dark">
       <div class="container grid grid--even-col2">
         <a href="./index.html" class="logo"><img src="./assets/logo/logo.png" alt="Gamehub" /></a>
-        <button class="btn theme-toggle" aria-pressed="false" aria-label="theme toggle">
+        <button class="btn btn--light-focus theme-toggle" aria-pressed="false" aria-label="theme toggle">
           <span>Darkmode</span>
           <span class="pill d-block" aria-hidden="true"><span class="ball | d-block"></span> </span>
         </button>

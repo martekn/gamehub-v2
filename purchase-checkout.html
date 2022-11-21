@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Document</title>
-    <meta name="description" content="" />
+    <title>Checkout | Gamehub</title>
+    <meta name="description" content="Purchase items in cart" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,121 +26,143 @@
 
     <!-- Css -->
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/nav-footer.css" />
-    <link rel="stylesheet" href="./css/checkout.css" />
   </head>
   <body>
     <div class="min-full-height">
       <a href="#main-content" class="skip-nav">Skip to content</a>
       <nav class="sm-nav | bg-dark">
-        <div class="container">
+        <div class="container flex flex--wrap">
           <div class="logo">
             <a href="./index.html"><img src="./assets/logo/logo.png" alt="Gamehub" /></a>
           </div>
+
+          <a href="./shopping-cart.html" class="link link--back">Return to cart</a>
         </div>
       </nav>
 
-      <main class="checkout purchase-checkout | container grid" id="main-content">
+      <main class="checkout purchase-checkout | container" id="main-content">
         <h1>Checkout</h1>
-        <form action="" class="bg-card rounded-corners shadow">
-          <div class="progress-bar">
-            <ol class="flex">
-              <li class="step completed">log in</li>
-              <li class="step active">Personal details</li>
-              <li class="step">Payment & Confirm</li>
-            </ol>
+
+        <form action="" class="grid">
+          <fieldset class="details checkout-step | bg-card rounded-corners shadow">
+            <div class="header | flex">
+              <span class="visually-hidden">Step 1 out of 3</span>
+              <span class="step | h3 rounded-corners" aria-hidden="true">1</span>
+              <legend class="title | h3">Personal details</legend>
+              <button class="link link--edit">Edit</button>
+            </div>
+            <div class="main | flow-content flow-form">
+              <span class="d-block text-bold"><span class="visually-hidden">Full name:</span>Filip Bjornson</span>
+              <div class="address">
+                <span class="visually-hidden">Address</span>
+                <span class="line | d-block">Lærerskolealleen 140, </span>
+                <span class="line | d-block">2408, Elverum, </span>
+                <span class="line | d-block">Norway</span>
+              </div>
+              <div class="contact">
+                <span><span class="visually-hidden">Phone number: </span>952 78 395, </span
+                ><span><span class="visually-hidden">Email: </span>dbrobins@me.com</span>
+              </div>
+
+              <!-- ! For when editing -->
+              <!-- <div class="editing | flex flex--col">
+                <div class="flow-content flow-form">
+                  <label for="first-name">First name *</label>
+                  <input type="text" id="first-name" required />
+                  <label for="last-name">Last name *</label>
+                  <input type="text" id="last-name" required />
+                  <label for="phone">Phone number</label>
+                  <input type="text" id="phone" />
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" required />
+                </div>
+                <div class="flow-content flow-form">
+                  <label for="address-one">Address field 1 *</label>
+                  <input type="text" id="address-one" required />
+                  <label for="Address-two">Address field 2</label>
+                  <input type="text" id="Address-two" />
+                  <div class="form-section flex flex--wrap">
+                    <div class="flow-content flow-form">
+                      <label for="zipcode">Postal code / Zip code *</label>
+                      <input type="text" id="zipcode" required />
+                    </div>
+                    <div class="flow-content flow-form">
+                      <label for="city">City *</label>
+                      <input type="text" id="city" required />
+                    </div>
+                  </div>
+                  <label for="country">Country *</label>
+                  <input type="text" id="country" required />
+                </div>
+                <div class="controls | flex">
+                  <button class="link">Cancel</button>
+                  <button class="btn">Save</button>
+                </div>
+              </div> -->
+            </div>
+          </fieldset>
+
+          <fieldset class="payment checkout-step | bg-card rounded-corners shadow">
+            <div class="header | flex">
+              <span class="visually-hidden">Step 2 out of 3</span>
+              <span class="step | h3 rounded-corners" aria-hidden="true">2</span>
+              <legend class="title | h3">Payment</legend>
+            </div>
+            <div class="main | flow-content flow-form">
+              <label for="cardnr">Credit Card Number</label>
+              <input type="text" id="cardnr" required />
+              <div class="form-section flex flex--wrap">
+                <div class="flow-content flow-form">
+                  <label for="expiration-date">Expiration date (mm/yy)</label>
+                  <input type="text" id="expiration-date" required />
+                </div>
+                <div class="flow-content flow-form">
+                  <label for="security-code">Security Code *</label>
+                  <input type="text" id="security-code" required />
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="summary checkout-step | bg-card rounded-corners shadow">
+            <div class="header | flex">
+              <span class="visually-hidden">Step 3 out of 3</span>
+              <span class="step | h3 rounded-corners" aria-hidden="true">3</span>
+              <h3 class="title">Order</h3>
+            </div>
+            <div class="main | flow-content flow-form">
+              <ul class="flow-content" aria-label="Items in cart">
+                <li class="flex">
+                  <span>Cyberpunk 2077</span>
+                  <span>$59.99</span>
+                </li>
+                <li class="flex">
+                  <span>The Witcher 3: Wild hunt</span>
+                  <span>$39.99</span>
+                </li>
+                <li class="flex">
+                  <span>Ori and the Will of the Wisps</span>
+                  <span>$23.99</span>
+                </li>
+              </ul>
+              <dl class="grid">
+                <dt>Price</dt>
+                <dd>$123.97</dd>
+                <dt>Discount</dt>
+                <dd>-$0</dd>
+                <dt class="h3">Total</dt>
+                <dd class="h3">$123.97</dd>
+              </dl>
+              <div class="flow-content">
+                <button class="btn">Place order</button>
+                <div class="terms">
+                  By clicking 'Place order' you accept our
+                  <button class="btn--terms link fg-low-contrast">terms & conditions</button>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <fieldset class="login flex flex--col">
-            <legend class="h2">log in</legend>
-            <label for="email">Email</label>
-            <input type="email" id="email" required />
-            <label for="password">Password</label>
-            <input type="password" id="password" required />
-            <button class="btn">Log in</button>
-          </fieldset>
-
-          <fieldset class="details flex flex--col current-step">
-            <legend class="h2">Personal details</legend>
-            <div class="details flex flex--col">
-              <label for="first-name">First name *</label>
-              <input type="text" id="first-name" required />
-              <label for="last-name">Last name *</label>
-              <input type="text" id="last-name" required />
-              <label for="phone">Phone number</label>
-              <input type="text" id="phone" />
-              <label for="email">Email *</label>
-              <input type="email" id="email" required />
-            </div>
-            <div class="address flex flex--col">
-              <label for="address-one">Address field 1 *</label>
-              <input type="text" id="address-one" required />
-              <label for="Address-two">Address field 2</label>
-              <input type="text" id="Address-two" />
-              <div class="grid grid--even-columns">
-                <div>
-                  <label for="zipcode">Postal code / Zip code *</label>
-                  <input type="text" id="zipcode" required />
-                </div>
-                <div>
-                  <label for="city">City *</label>
-                  <input type="text" id="city" required />
-                </div>
-              </div>
-              <label for="country">Country *</label>
-              <input type="text" id="country" required />
-            </div>
-            <button class="btn">Go to payment</button>
-          </fieldset>
-
-          <fieldset class="payment flex flex--col">
-            <legend class="h2">Payment and confirmation</legend>
-            <label for="cardnr">Credit Card Number</label>
-            <input type="text" id="cardnr" required />
-            <div class="grid grid--even-columns">
-              <div>
-                <label for="expiration-date">Expiration date (mm/yy)</label>
-                <input type="text" id="expiration-date" required />
-              </div>
-              <div>
-                <label for="security-code">Security Code *</label>
-                <input type="text" id="security-code" required />
-              </div>
-              <button class="btn">Pay $123.97</button>
-            </div>
-          </fieldset>
         </form>
-        <div class="summary | bg-card rounded-corners shadow">
-          <h2>Order summary</h2>
-          <table>
-            <tr>
-              <td>Cyberpunk 2077</td>
-              <td>$59.99</td>
-            </tr>
-            <tr>
-              <td>The Witcher 3: Wild hunt</td>
-              <td>$39.99</td>
-            </tr>
-            <tr>
-              <td>Ori and the Will of the Wisps</td>
-              <td>$23.99</td>
-            </tr>
-          </table>
-          <table>
-            <tr>
-              <td>Price</td>
-              <td>$123.97</td>
-            </tr>
-            <tr>
-              <td>Discount</td>
-              <td>-$0</td>
-            </tr>
-            <tr>
-              <td class="h3">Total</td>
-              <td class="h3">$123.97</td>
-            </tr>
-          </table>
-        </div>
       </main>
     </div>
   </body>

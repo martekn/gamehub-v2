@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Document</title>
-    <meta name="description" content="" />
+    <title>F.A.Q. | GameHub</title>
+    <meta name="description" content="View frequently asked questions at Gamehub" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,8 +26,6 @@
 
     <!-- Css -->
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/nav-footer.css" />
-    <link rel="stylesheet" href="./css/faq.css" />
   </head>
   <body>
     <div class="min-full-height">
@@ -48,7 +46,8 @@
           </div>
 
           <div class="search | flex">
-            <input type="text" name="" id="" placeholder="Search..." />
+            <label for="search-games" class="visually-hidden">Search for games</label>
+            <input type="text" name="search-games" id="search-games" placeholder="Search..." />
             <button>
               <span class="material-symbols-outlined"> search </span>
             </button>
@@ -103,52 +102,54 @@
           </div>
         </nav>
 
-        <div class="container">
+        <div class="container flow-content">
           <h1>F.A.Q.</h1>
           <p>A collection of frequently asked questions from our customers.</p>
-          <dl class="faq-container">
-            <div class="faq-item">
+          <dl class="faq-container | flow-content">
+            <div class="faq-item | flow-content">
               <dt>
-                <button aria-expanded="false" aria-controls="question1-answer" class="h3">How to sell a game?</button>
+                <button aria-expanded="false" aria-controls="question1-answer" class="h3 btn--transparent">
+                  How to sell a game?
+                </button>
               </dt>
-              <dd id="question1-answer">
+              <dd id="question1-answer" class="flow-content hide">
                 <p>
                   Navigate to your games library, hit the sell button on the game you wish to sell. From there you go
                   through the cart and checkout process
                 </p>
               </dd>
             </div>
-            <div class="faq-item">
+            <div class="faq-item | flow-content">
               <dt>
-                <button aria-expanded="false" aria-controls="question2-answer" class="h3">
+                <button aria-expanded="false" aria-controls="question2-answer" class="h3 btn--transparent">
                   How to access owned games?
                 </button>
               </dt>
-              <dd id="question2-answer">
+              <dd id="question2-answer" class="flow-content hide">
                 <p>
                   You can navigate to your games library by going to your account, and clicking the link to games
                   library under the games library section. You can also go from here if you have an account:
-                  <a href="#" class="link link--link">Games library</a>
+                  <a href="./library.html" class="link">Games library</a>
                 </p>
               </dd>
             </div>
-            <div class="faq-item">
+            <div class="faq-item | flow-content">
               <dt>
-                <button aria-expanded="false" aria-controls="question3-answer" class="h3">
+                <button aria-expanded="false" aria-controls="question3-answer" class="h3 btn--transparent">
                   When will I get my preorder?
                 </button>
               </dt>
-              <dd id="question3-answer">
+              <dd id="question3-answer" class="flow-content hide">
                 <p>You will get an email on the release of the game and will find the game in your games library.</p>
               </dd>
             </div>
-            <div class="faq-item">
+            <div class="faq-item | flow-content">
               <dt>
-                <button aria-expanded="false" aria-controls="question4-answer" class="h3">
+                <button aria-expanded="false" aria-controls="question4-answer" class="h3 btn--transparent">
                   How much do I gain by selling my games?
                 </button>
               </dt>
-              <dd id="question4-answer">
+              <dd id="question4-answer" class="flow-content hide">
                 <p>You get 15% of the original price of the game when you resell the game</p>
               </dd>
             </div>
@@ -160,7 +161,7 @@
     <footer class="primary-footer | bg-dark">
       <div class="container grid grid--even-col2">
         <a href="./index.html" class="logo"><img src="./assets/logo/logo.png" alt="Gamehub" /></a>
-        <button class="btn theme-toggle" aria-pressed="false" aria-label="theme toggle">
+        <button class="btn btn--light-focus theme-toggle" aria-pressed="false" aria-label="theme toggle">
           <span>Darkmode</span>
           <span class="pill d-block" aria-hidden="true"><span class="ball | d-block"></span> </span>
         </button>

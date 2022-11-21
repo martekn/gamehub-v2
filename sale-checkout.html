@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Document</title>
-    <meta name="description" content="" />
+    <title>Sell game | Gamehub</title>
+    <meta name="description" content="Sell your old game" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,102 +26,123 @@
 
     <!-- Css -->
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/nav-footer.css" />
-    <link rel="stylesheet" href="./css/checkout.css" />
   </head>
   <body>
     <div class="min-full-height">
       <a href="#main-content" class="skip-nav">Skip to content</a>
       <nav class="sm-nav | bg-dark">
-        <div class="container">
+        <div class="container flex flex--wrap">
           <div class="logo">
             <a href="./index.html"><img src="./assets/logo/logo.png" alt="Gamehub" /></a>
           </div>
+
+          <a href="./library.html" class="link link--back">Return to library</a>
         </div>
       </nav>
+      <main class="checkout purchase-checkout | container" id="main-content">
+        <h1>Sell Cyberpunk 2077</h1>
 
-      <main class="checkout | container grid" id="main-content">
-        <h1>Checkout</h1>
-        <form action="" class="bg-card rounded-corners shadow">
-          <fieldset class="details flex flex--col">
-            <legend class="h2">Personal details</legend>
-            <label for="first-name">First name *</label>
-            <input type="text" id="first-name" required />
-            <label for="last-name">Last name *</label>
-            <input type="text" id="last-name" required />
-            <label for="phone">Phone number</label>
-            <input type="text" id="phone" />
-            <label for="email">Email *</label>
-            <input type="email" id="email" required />
-          </fieldset>
-          <fieldset class="address flex flex--col">
-            <legend class="h2">Address</legend>
-            <label for="address-one">Address field 1 *</label>
-            <input type="text" id="address-one" required />
-            <label for="Address-two">Address field 2</label>
-            <input type="text" id="Address-two" />
-            <div class="grid grid--even-columns">
-              <div>
-                <label for="zipcode">Postal code / Zip code *</label>
-                <input type="text" id="zipcode" required />
-              </div>
-              <div>
-                <label for="city">City *</label>
-                <input type="text" id="city" required />
-              </div>
+        <form action="" class="grid">
+          <fieldset class="details checkout-step | bg-card rounded-corners shadow">
+            <div class="header | flex">
+              <span class="visually-hidden">Step 1 out of 3</span>
+              <span class="step | h3 rounded-corners" aria-hidden="true">1</span>
+              <legend class="title | h3">Personal details</legend>
+              <button class="link link--edit">Edit</button>
             </div>
-            <label for="country">Country *</label>
-            <input type="text" id="country" required />
+            <div class="main | flow-content flow-form">
+              <span class="d-block text-bold"><span class="visually-hidden">Full name:</span>Filip Bjornson</span>
+              <div class="address">
+                <span class="visually-hidden">Address</span>
+                <span class="line | d-block">Lærerskolealleen 140, </span>
+                <span class="line | d-block">2408, Elverum, </span>
+                <span class="line | d-block">Norway</span>
+              </div>
+              <div class="contact">
+                <span><span class="visually-hidden">Phone number: </span>952 78 395, </span
+                ><span><span class="visually-hidden">Email: </span>dbrobins@me.com</span>
+              </div>
+
+              <!-- ! For when editing -->
+              <!-- <div class="editing | flex flex--col">
+                <div class="flow-content flow-form">
+                  <label for="first-name">First name *</label>
+                  <input type="text" id="first-name" required />
+                  <label for="last-name">Last name *</label>
+                  <input type="text" id="last-name" required />
+                  <label for="phone">Phone number</label>
+                  <input type="text" id="phone" />
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" required />
+                </div>
+                <div class="flow-content flow-form">
+                  <label for="address-one">Address field 1 *</label>
+                  <input type="text" id="address-one" required />
+                  <label for="Address-two">Address field 2</label>
+                  <input type="text" id="Address-two" />
+                  <div class="form-section flex flex--wrap">
+                    <div class="flow-content flow-form">
+                      <label for="zipcode">Postal code / Zip code *</label>
+                      <input type="text" id="zipcode" required />
+                    </div>
+                    <div class="flow-content flow-form">
+                      <label for="city">City *</label>
+                      <input type="text" id="city" required />
+                    </div>
+                  </div>
+                  <label for="country">Country *</label>
+                  <input type="text" id="country" required />
+                </div>
+                <div class="controls | flex">
+                  <button class="link">Cancel</button>
+                  <button class="btn">Save</button>
+                </div>
+              </div> -->
+            </div>
           </fieldset>
 
-          <fieldset class="payment flex flex--col">
-            <legend class="h2">Payment and confirmation</legend>
-            <label for="cardnr">Credit Card Number</label>
-            <input type="text" id="cardnr" required />
-            <div class="grid grid--even-columns">
-              <div>
-                <label for="expiration-date">Expiration date (mm/yy)</label>
-                <input type="text" id="expiration-date" required />
-              </div>
-              <div>
-                <label for="security-code">Security Code *</label>
-                <input type="text" id="security-code" required />
-              </div>
+          <fieldset class="payment checkout-step | bg-card rounded-corners shadow">
+            <div class="header | flex">
+              <span class="visually-hidden">Step 2 out of 3</span>
+              <span class="step | h3 rounded-corners" aria-hidden="true">2</span>
+              <legend class="title | h3">Payment</legend>
             </div>
-            <div class="flex">
-              <input type="checkbox" id="rights" />
-              <label for="rights"
-                >I understand that the game will be removed from my library and I will no longer be able to play using
-                this copy of the game</label
-              >
+            <div class="main | flow-content flow-form">
+              <label for="accountnr">Bank account number</label>
+              <input type="text" id="accountnr" required />
             </div>
-            <button class="btn">Complete sale</button>
           </fieldset>
+
+          <div class="summary checkout-step | bg-card rounded-corners shadow">
+            <div class="header | flex">
+              <span class="visually-hidden">Step 3 out of 3</span>
+              <span class="step | h3 rounded-corners" aria-hidden="true">3</span>
+              <h3 class="title">Order</h3>
+            </div>
+            <div class="main | flow-content flow-form">
+              <div class="item | flex">
+                <span>Cyberpunk 2077</span>
+                <span>$59.99</span>
+              </div>
+
+              <dl class="grid">
+                <dt>Price</dt>
+                <dd>$123.97</dd>
+                <dt>Your cut</dt>
+                <dd>%15</dd>
+                <dt class="h3">You recieve</dt>
+                <dd class="h3">$8.99</dd>
+              </dl>
+              <div class="flow-content">
+                <button class="btn">Complete sale</button>
+                <div class="terms">
+                  By clicking 'Complete sale' you accept our
+                  <button class="link fg-low-contrast">terms & conditions</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </form>
-
-        <div class="summary | bg-card rounded-corners shadow">
-          <h2>Order summary</h2>
-          <table>
-            <tr>
-              <td>Cyberpunk 2077</td>
-              <td>$59.99</td>
-            </tr>
-          </table>
-          <table>
-            <tr>
-              <td>Price</td>
-              <td>$59.99</td>
-            </tr>
-            <tr>
-              <td>Your cut</td>
-              <td>%15</td>
-            </tr>
-            <tr>
-              <td class="h3">You recieve</td>
-              <td class="h3">$8.99</td>
-            </tr>
-          </table>
-        </div>
       </main>
     </div>
   </body>

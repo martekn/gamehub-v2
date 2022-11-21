@@ -28,6 +28,26 @@
 .primary-header button {
   cursor: pointer;
 }
+
+.primary-navigation li {
+  position: relative;
+}
+
+.primary-navigation li:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  height: 3px;
+  width: 100%;
+  background: transparent;
+  transition: background-color 0.25s ease-in;
+}
+
+.primary-navigation li:hover:after {
+  background: var(--clr-neutral-100);
+}
+
 .primary-header .mobile-nav-toggle,
 .primary-header a {
   color: var(--clr-font);
@@ -37,9 +57,10 @@
   display: inline-block;
   font-size: var(--fs-450);
 }
-.primary-navigation a:hover,
-.primary-navigation a:focus {
-  box-shadow: inset 0 -3px 0 0 var(--clr-neutral-100);
+
+.primary-navigation a:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 1px var(--clr-neutral-600), inset 0 0 0 2px var(--clr-neutral-100);
 }
 
 /* 1.1 Search
@@ -63,20 +84,17 @@
   --gap: var(--space-300);
   align-items: center;
 }
-.primary-header .user:hover span,
-.primary-header .user:focus span {
-  color: var(--clr-font-contrast);
-}
 
 .primary-header .cart {
   position: relative;
   margin-right: 0.5rem;
+  transition: transform 0.25s ease-in-out;
 }
 
 .cart .counter {
   line-height: 1;
   position: absolute;
-  background-color: var(--clr-theme-primary-400);
+  background-color: var(--clr-primary-400);
   color: var(--clr-neutral-100);
   min-width: 1.5rem;
   text-align: center;
@@ -85,15 +103,16 @@
   top: -0.25rem;
 }
 
-.primary-header .cart:hover,
-.primary-header .cart:focus {
-  color: var(--clr-font-contrast);
+.primary-header .user,
+.primary-header .cart {
+  transition: transform 0.25s ease-in-out;
 }
 
-.primary-header .cart:hover .counter,
-.primary-header .cart:focus .counter {
-  background-color: var(--clr-font);
-  color: var(--clr-bg);
+.primary-header .user:hover,
+.primary-header .user:focus,
+.primary-header .cart:hover,
+.primary-header .cart:focus {
+  transform: scale(1.1);
 }
 
 /* 1.3 Mobile only
@@ -154,10 +173,12 @@
     padding: var(--space-400) var(--space-500) var(--space-400) var(--screen-edge);
     width: 100%;
   }
+
   .primary-navigation .active {
     background-color: var(--clr-bg);
     position: relative;
   }
+
   .primary-navigation .active::before {
     content: "";
     position: absolute;
@@ -165,7 +186,7 @@
     left: 0;
     height: 100%;
     width: calc(var(--screen-edge) / 2);
-    background-color: var(--clr-theme-primary-400);
+    background-color: var(--clr-primary-400);
   }
 }
 
@@ -187,13 +208,17 @@
     padding-block: var(--space-450);
   }
 
+  .primary-navigation li:nth-last-of-type(2) {
+    margin-left: auto;
+  }
+
   .primary-navigation a {
     padding: var(--space-350) var(--space-375);
     color: var(--clr-neutral-100);
   }
 
   .primary-navigation .active {
-    background-color: var(--clr-theme-primary-400);
+    background-color: var(--clr-primary-400);
   }
 }
 
@@ -229,6 +254,9 @@
   content: "\276F";
   margin-left: var(--gap, var(--space-400));
 }
+.secondary-navigation li:last-of-type::after {
+  display: none;
+}
 
 .secondary-navigation a {
   color: var(--clr-font);
@@ -254,24 +282,24 @@
 /** 3. Primary footer
 -------------------------*/
 /* #region */
-footer {
+.primary-footer {
   margin-top: var(--space-1000);
   padding-block: var(--space-500) var(--space-375);
 }
 
-footer > div {
+.primary-footer > div {
   --gap: var(--space-500);
   justify-content: center;
   text-align: center;
 }
 
-footer .logo {
+.primary-footer .logo {
   display: inline-block;
   width: fit-content;
 }
 
-footer .logo,
-footer button {
+.primary-footer .logo,
+.primary-footer button {
   justify-self: center;
 }
 
@@ -288,14 +316,15 @@ footer button {
 .pill {
   height: 1.3rem;
   aspect-ratio: 1.8;
-  outline: 2px solid var(--clr-neutral-100);
+  padding: 1px;
+  border: 2px solid var(--clr-neutral-100);
   position: relative;
   border-radius: 30em;
 }
 
 .ball {
   background-color: var(--clr-neutral-100);
-  height: 1rem;
+  height: 0.85rem;
   aspect-ratio: 1;
   border-radius: 50%;
   margin: auto 0;
@@ -319,21 +348,21 @@ footer button {
 }
 
 @media (min-width: 45em) {
-  footer {
+  .primary-footer {
     padding-block: var(--space-600) var(--space-400);
   }
-  footer > div {
+  .primary-footer > div {
     --gap: var(--space-500);
     text-align: left;
   }
 
-  footer .logo {
+  .primary-footer .logo {
     justify-self: start;
   }
 
-  footer button {
+  .primary-footer button {
     justify-self: end;
   }
 }
-/* footer .container */
+
 /* #endregion */
