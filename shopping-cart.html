@@ -32,6 +32,7 @@
       <header class="primary-header | bg-card">
         <div class="top-bar | container grid">
           <button
+            id="mobile-hamburger"
             class="mobile-nav-toggle hamburger"
             aria-controls="primary-navigation"
             aria-expanded="false"
@@ -68,17 +69,17 @@
           </div>
         </div>
 
-        <nav class="primary-navigation-wrapper | bg-dark" data-visible="false">
+        <nav id="primary-navigation-wrapper" class="primary-navigation-wrapper | bg-dark" data-visible="false">
           <div class="container">
             <button
+              id="mobile-close"
               class="mobile-nav-toggle close"
               aria-controls="primary-navigation"
-              aria-expanded="false"
-              aria-haspopup="true"
+              aria-expanded="true"
             >
               <span class="material-symbols-outlined text-550"> close </span>
             </button>
-            <ul id="primary-navigation" class="primary-navigation | flex" aria-label="primary navigation">
+            <ul class="primary-navigation | flex" aria-label="primary navigation">
               <li><a href="./index.html">Home</a></li>
               <li><a href="./games-all.html">Games</a></li>
               <li><a href="./games-preorder.html">Pre-orders</a></li>
