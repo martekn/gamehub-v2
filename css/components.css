@@ -153,11 +153,13 @@ textarea {
 .card {
   display: grid;
   grid-template-rows: 5fr 3fr;
+}
+a.card {
   transition: transform 0.2s ease-in-out;
 }
 
-.card:hover,
-.card:focus-visible {
+a.card:hover,
+a.card:focus-visible {
   transform: scale(1.05);
   position: relative;
   z-index: 1000;
@@ -179,7 +181,7 @@ textarea {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
 .card img {
@@ -190,11 +192,10 @@ textarea {
 
 .card .info {
   padding: var(--space-400);
-  --flow-space: var(--space-375);
+  --gap: var(--space-375);
 }
 
-.card h3,
-.card h2 {
+.card .h3 {
   display: -webkit-box;
   line-height: 1.2;
   -webkit-line-clamp: 1;
@@ -207,11 +208,15 @@ textarea {
 .card .pricing {
   align-items: end;
   font-size: var(--fs-390);
+  flex: 1;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.5rem auto;
+  --gap: 0;
 }
 
-.card .pricing > div {
-  --gap: 0;
-  text-align: right;
+.card .preorder {
+  grid-row: 2 / 4;
+  align-self: end;
 }
 
 .card .discount {
@@ -223,11 +228,21 @@ textarea {
   padding: var(--space-350) var(--space-375);
   justify-self: start;
   border-radius: var(--border-radius);
+  grid-row: 2 / 4;
+  align-self: end;
 }
 .card .original-price {
   color: var(--clr-font-contrast);
 }
 
+.card .current-price {
+  grid-row: -1;
+}
+.card .current-price,
+.card .original-price {
+  grid-column: 2;
+  text-align: right;
+}
 .card .current-price,
 .card .discount {
   font-size: var(--fs-450);
@@ -236,6 +251,9 @@ textarea {
 
 .card--owned {
   grid-template-rows: 2fr 1fr;
+}
+.card--owned .info {
+  gap: var(--space-400);
 }
 
 .card--owned .cta-group {

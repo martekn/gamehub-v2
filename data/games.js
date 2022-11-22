@@ -1,8 +1,8 @@
-const data = [
+export const data = [
   {
     name: "Mass Effect Legendary Edition",
     id: 1,
-    imageUrl: "../assets/covers/image1",
+    imageUrl: "/assets/covers/image1.jpg",
     released: "14/5/2021",
     preOrder: false,
     price: 59.99,
@@ -13,7 +13,7 @@ const data = [
   {
     name: "New World",
     id: 2,
-    imageUrl: "../assets/covers/image2",
+    imageUrl: "/assets/covers/image2.jpg",
     released: "28/9/2021",
     preOrder: false,
     price: 40,
@@ -24,7 +24,7 @@ const data = [
   {
     name: "Life Is Strange: True Colors",
     id: 3,
-    imageUrl: "../assets/covers/image3",
+    imageUrl: "/assets/covers/image3.jpg",
     released: "10/9/2021",
     preOrder: false,
     price: 59.99,
@@ -35,7 +35,7 @@ const data = [
   {
     name: "Cyberpunk 2077",
     id: 4,
-    imageUrl: "../assets/covers/image4",
+    imageUrl: "/assets/covers/image4.jpg",
     released: "09/12/2020",
     preOrder: false,
     price: 59.99,
@@ -46,7 +46,7 @@ const data = [
   {
     name: "GRIS",
     id: 5,
-    imageUrl: "../assets/covers/image5",
+    imageUrl: "/assets/covers/image5.jpg",
     released: "13/12/2018 ",
     preOrder: false,
     price: 16.99,
@@ -59,7 +59,7 @@ const data = [
   {
     name: "Fallout 76",
     id: 6,
-    imageUrl: "../assets/covers/image6",
+    imageUrl: "/assets/covers/image6.jpg",
     released: "14/11/2018",
     preOrder: false,
     price: 39.99,
@@ -72,7 +72,7 @@ const data = [
   {
     name: "Q.U.B.E. 2",
     id: 7,
-    imageUrl: "../assets/covers/image7",
+    imageUrl: "/assets/covers/image7.jpg",
     released: "13/3/2018",
     preOrder: false,
     price: 24.99,
@@ -85,7 +85,7 @@ const data = [
   {
     name: "Portal",
     id: 8,
-    imageUrl: "../assets/covers/image8",
+    imageUrl: "/assets/covers/image8.jpg",
     released: "10/10/2007",
     preOrder: false,
     price: 9.99,
@@ -98,7 +98,7 @@ const data = [
   {
     name: "Grand Theft Auto V",
     id: 9,
-    imageUrl: "../assets/covers/image9",
+    imageUrl: "/assets/covers/image9.jpg",
     released: "14/4/2015",
     preOrder: false,
     price: 29.99,
@@ -111,7 +111,7 @@ const data = [
   {
     name: "World of Warcraft: Shadowlands",
     id: 10,
-    imageUrl: "../assets/covers/image10",
+    imageUrl: "/assets/covers/image10.jpg",
     released: "23/11/2020",
     preOrder: false,
     price: 39.99,
@@ -122,7 +122,7 @@ const data = [
   {
     name: "The Witcher 3: Wild Hunt",
     id: 11,
-    imageUrl: "../assets/covers/image11",
+    imageUrl: "/assets/covers/image11.jpg",
     released: "19/5/2015",
     preOrder: false,
     price: 49.99,
@@ -135,7 +135,7 @@ const data = [
   {
     name: "The Sims™ 4",
     id: 12,
-    imageUrl: "../assets/covers/image12",
+    imageUrl: "/assets/covers/image12.jpg",
     released: "02/9/2014",
     preOrder: false,
     price: 39.99,
@@ -146,7 +146,7 @@ const data = [
   {
     name: "Ori and the Will of the Wisps",
     id: 13,
-    imageUrl: "../assets/covers/image13",
+    imageUrl: "/assets/covers/image13.jpg",
     released: "10/3/2020",
     preOrder: false,
     price: 29.99,
@@ -159,7 +159,7 @@ const data = [
   {
     name: "Assassin's Creed Origins",
     id: 14,
-    imageUrl: "../assets/covers/image14",
+    imageUrl: "/assets/covers/image14.jpg",
     released: "26/10/2017",
     preOrder: false,
     price: 59.99,
@@ -172,7 +172,7 @@ const data = [
   {
     name: "DOOM Eternal",
     id: 15,
-    imageUrl: "../assets/covers/image15",
+    imageUrl: "/assets/covers/image15.jpg",
     released: "20/3/2020",
     preOrder: false,
     price: 59.99,
@@ -183,7 +183,7 @@ const data = [
   {
     name: "Darksiders Warmastered Edition",
     id: 16,
-    imageUrl: "../assets/covers/image16",
+    imageUrl: "/assets/covers/image16.jpg",
     released: "29/11/2016",
     preOrder: false,
     price: 15.99,
@@ -191,6 +191,28 @@ const data = [
       onSale: true,
       discount: 70,
       discountedPrice: 4.79,
+    },
+  },
+  {
+    name: "God of war",
+    id: 17,
+    imageUrl: "/assets/covers/image17.jpg",
+    released: "14/01/2022",
+    preOrder: true,
+    price: 53.56,
+    sale: {
+      onSale: false,
+    },
+  },
+  {
+    name: "Elden Ring",
+    id: 18,
+    imageUrl: "/assets/covers/image18.jpg",
+    released: "25/02/2022",
+    preOrder: true,
+    price: 58.44,
+    sale: {
+      onSale: false,
     },
   },
 ];
