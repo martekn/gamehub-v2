@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<!-- <html lang="en" class=""> -->
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -106,7 +105,12 @@
     <footer class="primary-footer | bg-dark">
       <div class="container grid grid--even-col2">
         <a href="./index.html" class="logo"><img src="./assets/logo/logo.png" alt="Gamehub" /></a>
-        <button class="btn btn--light-focus theme-toggle" aria-pressed="false" aria-label="theme toggle">
+        <button
+          id="theme-toggle"
+          class="btn btn--light-focus theme-toggle"
+          aria-pressed="false"
+          aria-label="theme toggle"
+        >
           <span>Darkmode</span>
           <span class="pill d-block" aria-hidden="true"><span class="ball | d-block"></span> </span>
         </button>
@@ -114,5 +118,7 @@
         <span>Copyright @ Martemkn 2022</span>
       </div>
     </footer>
+
+    <script type="module" src="./js/app.js"></script>
   </body>
 </html>
