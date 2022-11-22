@@ -250,8 +250,13 @@ body {
   place-items: center;
   position: relative;
 }
+
 .image-viewer .current-image img {
   position: absolute;
+}
+
+.image-viewer {
+  min-height: max(40vh, 500px);
 }
 
 .image-viewer .image-fill {
