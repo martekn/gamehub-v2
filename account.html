@@ -34,13 +34,14 @@
         <header class="primary-header | bg-card">
           <div class="top-bar | container grid">
             <button
-              class="mobile-nav-toggle hamburger"
-              aria-controls="primary-navigation"
-              aria-expanded="false"
-              aria-haspopup="true"
-            >
-              <span class="material-symbols-outlined | text-600"> menu </span>
-            </button>
+            id="mobile-hamburger"
+            class="mobile-nav-toggle hamburger"
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+            aria-haspopup="true"
+          >
+            <span class="material-symbols-outlined | text-600"> menu </span>
+          </button>
 
             <div class="logo">
               <a href="./index.html"><img src="./assets/logo/logo.png" alt="Gamehub" /></a>
@@ -70,16 +71,17 @@
             </div>
           </div>
 
-         <nav id="primary-navigation-wrapper" class="primary-navigation-wrapper | bg-dark" data-visible="false">
+        <nav id="primary-navigation-wrapper" class="primary-navigation-wrapper | bg-dark" data-visible="false">
             <div class="container">
               <button
-                class="mobile-nav-toggle close"
-                aria-controls="primary-navigation"
-                aria-expanded="false"
-                aria-haspopup="true"
-              >
-                <span class="material-symbols-outlined text-550"> close </span>
-              </button>
+              id="mobile-close"
+              class="mobile-nav-toggle close"
+              aria-controls="primary-navigation"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              <span class="material-symbols-outlined text-550"> close </span>
+            </button>
               <ul id="primary-navigation" class="primary-navigation | flex" aria-label="primary navigation">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./games-all.html">Games</a></li>
