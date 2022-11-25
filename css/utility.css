@@ -101,7 +101,7 @@ form.flow-content button {
   --max-width: 75rem;
   --screen-edge: var(--space-400);
 
-  max-width: min(var(--max-width), 100% - (var(--screen-edge) * 2));
+  width: min(var(--max-width), 100% - (var(--screen-edge) * 2));
   margin-inline: auto;
 }
 
