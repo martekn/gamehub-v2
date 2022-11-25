@@ -110,12 +110,14 @@
           <h1>All games</h1>
           <div class="filter">
             <label for="filter">Filter by:</label>
-            <select name="filter" id="filter">
-              <option value="popularity">Popularity</option>
-              <option value="latest">Latest</option>
-              <option value="price">Price</option>
-              <option value="name">Name</option>
-            </select>
+            <div class="select-wrapper">
+              <select name="filter" id="filter">
+                <option value="popularity">Popularity</option>
+                <option value="latest">Latest</option>
+                <option value="price">Price</option>
+                <option value="name">Name</option>
+              </select>
+            </div>
           </div>
           <div id="games-container" class="games-container | grid"></div>
         </div>
