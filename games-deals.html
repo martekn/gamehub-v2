@@ -97,7 +97,7 @@
             <span>You are here:</span>
             <ol class="flex">
               <li><a href="./index.html">Homepage</a></li>
-              <li><a href="./games-deals.html" aria-current="Special deals">Special deals</a></li>
+              <li><a href="./games-deals.html" aria-current="page">Special deals</a></li>
             </ol>
           </div>
         </nav>
@@ -105,12 +105,12 @@
         <div class="game-list | container grid grid--even-col2">
           <h1>Special deals</h1>
           <div class="filter">
-            <label for="">Filter by:</label>
-            <select name="" id="">
-              <option value="">Popularity</option>
-              <option value="">Latest</option>
-              <option value="">Price</option>
-              <option value="">Name</option>
+            <label for="filter">Filter by:</label>
+            <select name="filter" id="filter">
+              <option value="popularity">Popularity</option>
+              <option value="latest">Latest</option>
+              <option value="price">Price</option>
+              <option value="name">Name</option>
             </select>
           </div>
           <div id="games-container" class="games-container | grid"></div>

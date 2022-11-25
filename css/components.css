@@ -111,6 +111,16 @@ textarea {
   padding: var(--space-350);
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .custom-checkbox {
   position: relative;
 }
@@ -130,7 +140,7 @@ textarea {
   content: "";
   display: block;
   height: 1.5rem;
-  aspect-ratio: 1;
+  aspect-ratio: 1 / 1;
 }
 
 .custom-checkbox input[type="checkbox"]:checked + label::before {

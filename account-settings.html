@@ -102,7 +102,7 @@
             <ol class="flex">
               <li><a href="./index.html">Home</a></li>
               <li><a href="./account.html">My account</a></li>
-              <li><a href="./account-settings.html" aria-current="Account settings">Account settings</a></li>
+              <li><a href="./account-settings.html" aria-current="page">Account settings</a></li>
             </ol>
           </div>
         </nav>
@@ -110,7 +110,7 @@
         <div class="account-settings | container">
           <h1>Account settings</h1>
           <div class="grid grid--even-col2">
-            <form action="" class="information | flow-content bg-card rounded-corners shadow grid">
+            <form action="get" class="information | flow-content bg-card rounded-corners shadow grid">
               <fieldset class="flow-content flow-form">
                 <legend class="h2">Your information</legend>
                 <label for="first-name">First name *</label>
@@ -118,7 +118,7 @@
                 <label for="last-name">Last name *</label>
                 <input type="text" id="last-name" required />
                 <label for="phone">Phone number</label>
-                <input type="text" id="phone" />
+                <input type="text" id="phone" type="tel" />
                 <label for="email">Email *</label>
                 <input type="email" id="email" required />
               </fieldset>
@@ -131,7 +131,7 @@
                 <div class="form-section flex flex--wrap">
                   <div class="flow-content flow-form">
                     <label for="zipcode">Zip code *</label>
-                    <input type="text" id="zipcode" required />
+                    <input type="number" id="zipcode" required />
                   </div>
                   <div class="flow-content flow-form">
                     <label for="city">City *</label>
@@ -143,7 +143,7 @@
               </fieldset>
               <button class="btn">Save changes</button>
             </form>
-            <form action="" class="passoword-update | bg-card rounded-corners shadow flow-content flow-form grid">
+            <form action="get" class="passoword-update | bg-card rounded-corners shadow flow-content flow-form grid">
               <h2>Update your password</h2>
               <label for="current-pword">Current password</label>
               <input type="password" id="current-pword" required />

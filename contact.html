@@ -98,20 +98,20 @@
             <span>You are here:</span>
             <ol class="flex">
               <li><a href="./index.html">Home</a></li>
-              <li><a href="./contact.html" aria-current="Contact us">Contact us</a></li>
+              <li><a href="./contact.html" aria-current="page">Contact us</a></li>
             </ol>
           </div>
         </nav>
 
         <div class="contact | container bg-card rounded-corners shadow grid">
-          <form action="" class="flex flex--col flow-content flow-form">
+          <form action="get" class="flex flex--col flow-content flow-form">
             <h1>Contact us</h1>
             <label for="name">Full name *</label>
             <input type="text" id="name" required />
             <label for="email">Email</label>
             <input type="email" id="email" required />
-            <label for="message" required>Message</label>
-            <textarea id="message"></textarea>
+            <label for="message">Message</label>
+            <textarea id="message" required></textarea>
             <button class="btn">Send Message</button>
           </form>
           <div class="contact-info | flex flex--col bg-dark">
