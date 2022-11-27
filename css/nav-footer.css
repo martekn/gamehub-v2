@@ -208,6 +208,10 @@
     width: calc(var(--screen-edge) / 4);
     background-color: var(--clr-primary-400);
   }
+
+  .mobile-modal-open {
+    overflow: hidden;
+  }
 }
 
 /* 1.4 Desktop only
