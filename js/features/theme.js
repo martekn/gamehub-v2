@@ -11,10 +11,6 @@ const toggleTheme = (button, themeState) => {
   html.classList.toggle("dark");
 };
 
-/**
- * Fetches the theme from local storage and toggles the theme
- * @param {HTMLElement} button or element with aria-pressed attribute
- */
 const getThemeFromLS = () => {
   const themeState = JSON.parse(localStorage.getItem("theme"));
 
@@ -23,10 +19,6 @@ const getThemeFromLS = () => {
   }
 };
 
-/**
- * Updates the theme based on the aria-pressed attribute
- * @param {HTMLElement} button or element with aria-pressed attribute
- */
 const updateTheme = () => {
   const currentState = themeButton.getAttribute("aria-pressed");
   const newState = currentState === "false";
