@@ -3,14 +3,20 @@ const navElements = "#mobile-close, #primary-navigation a";
 const nav = document.querySelector("#primary-navigation-wrapper");
 const mobileOpenNav = document.querySelector("#mobile-hamburger");
 const mobileCloseNav = document.querySelector("#mobile-close");
-const navContent = nav.querySelectorAll(navElements);
-const firstNavElement = navContent[0];
-const lastNavElement = navContent[navContent.length - 1];
+let navContent;
+let firstNavElement;
+let lastNavElement;
+
+if (nav) {
+  navContent = nav.querySelectorAll(navElements);
+  firstNavElement = navContent[0];
+  lastNavElement = navContent[navContent.length - 1];
+}
 
 const setNavTrapFocus = (e) => {
   const tabPressed = e.key === "Tab";
 
-  if (e.key === "Shift") {
+  if (e.key === "Shift" || e.key === "Enter") {
     return;
   }
 
