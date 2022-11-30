@@ -15,7 +15,7 @@ export const createCard = (game, owned) => {
     card = createHTML("div", ["card", "card--owned", "bg-card", "rounded-corners", "shadow"]);
     const btnContainer = createHTML("div", ["cta-group", "flex"]);
     const downloadBtn = createHTML("button", "btn", "Download");
-    const sellBtn = createHTML("button", ["btn", "btn--accent"], "Sell");
+    const sellBtn = createHTML("a", ["btn", "btn--accent"], "Sell", { href: "./sale-checkout.html" });
     btnContainer.append(downloadBtn, sellBtn);
     content.appendChild(btnContainer);
   } else {

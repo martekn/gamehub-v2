@@ -127,40 +127,40 @@
         <div class="account-settings | container">
           <h1>Account settings</h1>
           <div class="grid grid--even-col2">
-            <form action="get" class="information | flow-content bg-card rounded-corners shadow grid">
+            <form method="post" class="information | flow-content bg-card rounded-corners shadow grid">
               <fieldset class="flow-content flow-form">
                 <legend class="h2">Your information</legend>
                 <label for="first-name">First name *</label>
-                <input type="text" id="first-name" required />
+                <input type="text" id="first-name" value="Filip" required />
                 <label for="last-name">Last name *</label>
-                <input type="text" id="last-name" required />
+                <input type="text" id="last-name" value="Bjornson" required />
                 <label for="phone">Phone number</label>
-                <input type="tel" id="phone" />
+                <input type="tel" id="phone" value="952 78 395" />
                 <label for="email">Email *</label>
-                <input type="email" id="email" required />
+                <input type="email" id="email" value="dbrobins@me.com" required />
               </fieldset>
               <fieldset class="flow-content flow-form">
                 <legend class="h2">Address</legend>
                 <label for="address-one">Address field 1 *</label>
-                <input type="text" id="address-one" required />
+                <input type="text" id="address-one" value="Lærerskolealleen 140" required />
                 <label for="Address-two">Address field 2</label>
                 <input type="text" id="Address-two" />
                 <div class="form-section flex flex--wrap">
                   <div class="flow-content flow-form">
                     <label for="zipcode">Zip code *</label>
-                    <input type="number" id="zipcode" required />
+                    <input type="number" id="zipcode" value="2408" required />
                   </div>
                   <div class="flow-content flow-form">
                     <label for="city">City *</label>
-                    <input type="text" id="city" required />
+                    <input type="text" id="city" value="Elverum" required />
                   </div>
                 </div>
                 <label for="country">Country *</label>
-                <input type="text" id="country" required />
+                <input type="text" id="country" value="Norway" required />
               </fieldset>
               <button class="btn">Save changes</button>
             </form>
-            <form action="get" class="passoword-update | bg-card rounded-corners shadow flow-content flow-form grid">
+            <form method="post" class="passoword-update | bg-card rounded-corners shadow flow-content flow-form grid">
               <h2>Update your password</h2>
               <label for="current-pword">Current password</label>
               <input type="password" id="current-pword" required />

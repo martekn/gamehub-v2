@@ -59,7 +59,7 @@
       <main class="checkout purchase-checkout | container" id="main-content">
         <h1>Checkout</h1>
 
-        <form action="get" class="grid">
+        <form action="./purchase-confirmation.html" method="get" class="grid">
           <fieldset class="details checkout-step | bg-card rounded-corners shadow">
             <div class="header | flex">
               <span class="visually-hidden">Step 1 out of 3</span>
@@ -90,7 +90,7 @@
             </div>
             <div class="main | flow-content flow-form">
               <label for="cardnr">Credit Card Number</label>
-              <input type="text" id="cardnr" required />
+              <input type="number" id="cardnr" required />
               <div class="form-section flex flex--wrap">
                 <div class="flow-content flow-form">
                   <label for="expiration-date">Expiration date (mm/yy)</label>
