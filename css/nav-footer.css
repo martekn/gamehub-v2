@@ -4,8 +4,7 @@
       1.1 Search
       1.2 cta group: user / cart
       1.3 Mobile only
-      1.4 Desktop only
-      1.5 Small nav
+      1.4 Small nav
     2. Secondary navigation / breadcrumbs
     3. Primary footer
 */
@@ -13,24 +12,40 @@
 /** 1. Primary header and navigation (+ logo)
 -------------------------*/
 /* #region */
+.mobile-nav-toggle {
+  display: none;
+}
 
 .logo a {
   display: flex;
   width: fit-content;
 }
+
+.logo img {
+  max-height: 2.5rem;
+}
+
 .primary-header .top-bar {
   --gap: var(--space-700);
   grid-template-columns: auto 1fr auto;
-  padding-block: var(--space-400);
   align-items: center;
+  padding-block: var(--space-450);
 }
 
 .primary-header button {
   cursor: pointer;
 }
 
+.primary-navigation {
+  --gap: 0;
+}
+
 .primary-navigation li {
   position: relative;
+}
+
+.primary-navigation li:nth-last-of-type(2) {
+  margin-left: auto;
 }
 
 .primary-navigation li:after {
@@ -56,6 +71,12 @@
 .primary-navigation a {
   display: inline-block;
   font-size: var(--fs-450);
+  padding: var(--space-350) var(--space-375);
+  color: var(--clr-neutral-100);
+}
+
+.primary-navigation .active {
+  background-color: var(--clr-primary-400);
 }
 
 .primary-navigation a:focus-visible {
@@ -165,13 +186,8 @@
     margin-left: var(--screen-edge);
   }
 
-  @keyframes slidein {
-    0% {
-      transform: translateX(-130%);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  .primary-navigation li:nth-last-of-type(2) {
+    margin-left: 0;
   }
 
   .primary-navigation-wrapper[data-visible="true"] {
@@ -192,11 +208,14 @@
   .primary-navigation a {
     padding: var(--space-400) var(--space-500) var(--space-400) var(--screen-edge);
     width: 100%;
+    color: var(--clr-font);
+    transition: color 0.2s ease-in-out;
   }
 
   .primary-navigation .active {
     background-color: var(--clr-bg);
     position: relative;
+    font-weight: var(--fw-medium);
   }
 
   .primary-navigation .active::before {
@@ -212,41 +231,16 @@
   .mobile-modal-open {
     overflow: hidden;
   }
-}
 
-/* 1.4 Desktop only
--------------------------*/
-@media (min-width: 50em) {
-  .logo img {
-    max-height: 2.5rem;
+  .primary-navigation a:hover {
+    color: var(--clr-font-contrast);
   }
-  .mobile-nav-toggle {
+  .primary-navigation li:hover::after {
     display: none;
   }
-
-  .primary-navigation {
-    --gap: 0;
-  }
-
-  .primary-header .top-bar {
-    padding-block: var(--space-450);
-  }
-
-  .primary-navigation li:nth-last-of-type(2) {
-    margin-left: auto;
-  }
-
-  .primary-navigation a {
-    padding: var(--space-350) var(--space-375);
-    color: var(--clr-neutral-100);
-  }
-
-  .primary-navigation .active {
-    background-color: var(--clr-primary-400);
-  }
 }
 
-/* 1.5 Small nav
+/* 1.4 Small nav
 -------------------------*/
 .sm-nav .container {
   padding: var(--space-350) var(--screen-edge);
