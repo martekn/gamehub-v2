@@ -69,7 +69,7 @@
             </div>
             <a href="./auth-forgot.html" class="link fg-low-contrast">Forgot password?</a>
           </div>
-          <button class="btn">Log in</button>
+          <button id="login" class="btn">Log in</button>
           <div class="alternative flex flex--col">
             <span class="fg-low-contrast">Dont have an account?</span
             ><a href="./auth-signup.html" class="link">Sign up</a>
@@ -77,6 +77,28 @@
         </form>
       </main>
     </div>
+
+    <footer class="primary-footer | bg-dark">
+      <div class="container grid grid--even-col2">
+        <a href="./index.html" class="logo"><img src="./assets/logo/logo.png" alt="Gamehub" /></a>
+        <button
+          id="theme-toggle"
+          class="btn btn--light-focus theme-toggle"
+          aria-pressed="false"
+          aria-label="theme toggle"
+        >
+          <span>Darkmode</span>
+          <span class="pill d-block" aria-hidden="true"><span class="ball | d-block"></span> </span>
+        </button>
+
+        <span>Copyright @ Martemkn 2022</span>
+      </div>
+    </footer>
+
     <script type="module" src="./js/app.js"></script>
+    <script type="module">
+      import { setupLogin } from "./js/pages/login.js";
+      setupLogin();
+    </script>
   </body>
 </html>

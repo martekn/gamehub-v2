@@ -71,10 +71,10 @@
           </div>
 
           <div class="cta-group | flex">
-            <a href="./account.html" class="user | flex">
-              <!-- <a href="./auth.html?t=login" class="user | flex"> -->
-              <span class="material-symbols-outlined | text-550"> person </span> Account
-              <!-- <span class="material-symbols-outlined"> login </span> Log in -->
+            <!-- <a href="./account.html" class="user | flex"> -->
+            <a id="auth" href="./auth-login.html" class="user | flex">
+              <span id="auth-icon" class="material-symbols-outlined"> login </span>
+              <span id="auth-text">Log in</span>
             </a>
             <a href="./shopping-cart.html" class="cart | flex">
               <span class="material-symbols-outlined | text-550"> shopping_cart </span>
@@ -122,7 +122,7 @@
 
         <div class="account-sections | container grid grid--even-col2">
           <h1>My account</h1>
-          <button class="link link--logout">Log out</button>
+          <button id="logout" class="link link--logout">Log out</button>
           <div class="grid grid--even-col2">
             <section class="bg-card rounded-corners shadow flex flex--col">
               <h2>My orders</h2>
@@ -188,5 +188,9 @@
       </div>
     </footer>
     <script type="module" src="./js/app.js"></script>
+    <script type="module">
+      import { setupAccount } from "./js/pages/account.js";
+      setupAccount();
+    </script>
   </body>
 </html>
