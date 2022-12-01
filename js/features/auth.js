@@ -18,7 +18,6 @@ const isLoggedIn = () => {
   const authStatus = JSON.parse(localStorage.getItem("auth"));
   const url = location.href.split("/");
   const page = url[url.length - 1];
-
   if (authStatus === "true") {
     const authPages = ["auth-login.html", "auth-signup.html", "auth-forgot.html"];
 
@@ -30,11 +29,13 @@ const isLoggedIn = () => {
       "account.html",
       "account-settings.html",
       "library.html",
-      "purchase-history",
-      "sale-history",
-      "purchase-details",
-      "sale-details",
-      "sale-checkout",
+      "purchase-history.html",
+      "sale-history.html",
+      "purchase-checkout.html",
+      "sale-checkout.html",
+      "purchase-details.html",
+      "sale-details.html",
+      "sale-checkout.html",
     ];
     if (accountPages.includes(page)) {
       location.href = "./auth-login.html";
