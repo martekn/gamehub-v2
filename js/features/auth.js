@@ -21,10 +21,9 @@ const isLoggedIn = () => {
 
   if (authStatus === "true") {
     const authPages = ["auth-login.html", "auth-signup.html", "auth-forgot.html"];
-    for (const authPage of authPages) {
-      if (page === authPage) {
-        location.href = "./account.html";
-      }
+
+    if (authPages.includes(page)) {
+      location.href = "./account.html";
     }
   } else {
     const accountPages = [
@@ -37,10 +36,8 @@ const isLoggedIn = () => {
       "sale-details",
       "sale-checkout",
     ];
-    for (const accountPage of accountPages) {
-      if (page === accountPage) {
-        location.href = "./auth-login.html";
-      }
+    if (accountPages.includes(page)) {
+      location.href = "./auth-login.html";
     }
   }
 };
